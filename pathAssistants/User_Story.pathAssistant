@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>copado__User_Story__c</entityName>
+    <fieldName>copado__Status__c</fieldName>
+    <masterLabel>User Story</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Customer Journey is closed - reasons for Closure are tracked in the &amp;quot;Close Reason&amp;quot; field&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Closed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;Main Actor:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;UAT Test Team&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Tasks:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;As soon as all User Stories of a Customer Journey are tested successfully, the UAT Test Team&lt;/p&gt;&lt;p&gt;can deploy the Customer Journey and the status automatically changes to &amp;quot;Completed&amp;quot;.&lt;/p&gt;</info>
+        <picklistValueName>Completed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;Main Actor:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Lead Developer&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Tasks:&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Lead Developer tests changes in DEV.&lt;/li&gt;&lt;li&gt;Lead Developer checks if everything is documented and implemented according to Best Practice.&lt;/li&gt;&lt;li&gt;Lead Developer deploys change from DEV to INT.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Deployment</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;Main Actor:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Developer&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Tasks:&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Tracking of Implementation Progress.&lt;/li&gt;&lt;li&gt;Documentation of Implementation.&lt;/li&gt;&lt;li&gt;Documentation of spend Effort in days.&lt;/li&gt;&lt;li&gt;Change status to &amp;quot;Completed&amp;quot;.&lt;/li&gt;&lt;li&gt;Upload all changes to GIT.&lt;/li&gt;&lt;li&gt;Push Button &amp;quot;Promote and Deploy&amp;quot; to push features to DEV.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>In Progress</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;Main Actor:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;UAT Test Team&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Tasks:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;As soon as all User Stories of a Customer Journey are in status &amp;quot;Ready for UAT&amp;quot;, the UAT Test Team can test the End-2-End process and document the test results in the Customer Journey.&lt;/p&gt;</info>
+        <picklistValueName>Ready for UAT</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;Main Actor:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Project Leads&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Tasks:&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;After approving the specified Technical Specification, the User Stories can be planned.&lt;/li&gt;&lt;li&gt;Status automatically changes to &amp;quot;In Progress&amp;quot; when User Story is assigned to a Sprint and Sprint starts.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Sprint Planning</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;Main Actor:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Lead Developer&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Tasks:&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Setup new Scratch Org through the Wizard or select existing one&lt;/li&gt;&lt;li&gt;Create and specify all tasks as well as assign a Developer who will do the Implementation.&lt;/li&gt;&lt;li&gt;After technical specification push &amp;quot;Submit for Approval&amp;quot;, so the User Story can be approved for the implementation and the Project Lead can plan the sprint.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Technical Specification</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;Main Actor:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Tester&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Tasks:&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Internal Tester tests implementation in INT and documents Test Cases and Defects.&lt;/li&gt;&lt;li&gt;If a Defect exists, the internal Tester passes the Test Case and Defects to the Lead Developer.&lt;/li&gt;&lt;li&gt;Lead Developer needs to change the status to &amp;quot;In Progress&amp;quot; if Defect exists and fix the error in the Scratch Org.&lt;/li&gt;&lt;li&gt;If no defect exists, the Tester deploys to QA.&lt;/li&gt;&lt;li&gt;Tester pushes button &amp;quot;Ready for UAT&amp;quot;.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Testing</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>User_Story</recordTypeName>
+</PathAssistant>

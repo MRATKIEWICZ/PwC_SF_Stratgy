@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>Acceptance_Criteria__c</field>
+        <formula>copado__User_Story__c.Customer_Journey__r.Acceptance_Criteria__c</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Customer_Journey__c</field>
+        <formula>copado__User_Story__c.Customer_Journey__c</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Environment__c</field>
+        <formula>copado__User_Story__c.Environment_Name__c</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Name</field>
+        <formula>copado__User_Story__c.copado__User_Story_Title__c +&apos;.&apos;+ copado__User_Story__c.Environment_Name__c+&apos;.&apos;+
+&apos;&lt;Name&gt;&apos;</formula>
+    </fieldOverrides>
+    <label>New Test Case</label>
+    <optionsCreateFeedItem>true</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Name</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Test_Type__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Tester__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Expected_Results__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <targetObject>Test_Case__c</targetObject>
+    <targetParentField>User_Story__c</targetParentField>
+    <targetRecordType>Test_Case__c.Development_Test</targetRecordType>
+    <type>Create</type>
+</QuickAction>

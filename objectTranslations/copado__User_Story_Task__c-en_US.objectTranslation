@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Effort (d) --></label>
+        <name>Effort_d__c</name>
+    </fields>
+    <fields>
+        <label><!-- Efforts Submitted --></label>
+        <name>Efforts_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Onsite --></label>
+        <name>Onsite__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Name --></label>
+        <name>Project_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project/Sprint/Ressource/Team/Location --></label>
+        <name>Project_Sprint_Ressource_Team_Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ressource --></label>
+        <name>Ressource__c</name>
+        <relationshipLabel><!-- User Story Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Description --></label>
+        <name>Task_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Specification --></label>
+        <name>Task_Specification__c</name>
+    </fields>
+    <fields>
+        <label><!-- Team --></label>
+        <name>Team__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Sheet --></label>
+        <name>Time_Sheet__c</name>
+        <relationshipLabel><!-- User Story Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- User Story Title --></label>
+        <name>User_Story_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>copado__Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hours Remaining --></label>
+        <name>copado__Hours_Remaining__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>copado__Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deferred</masterLabel>
+            <translation><!-- Deferred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting on someone else</masterLabel>
+            <translation><!-- Waiting on someone else --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Subject --></label>
+        <name>copado__Subject__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Story --></label>
+        <name>copado__User_Story__c</name>
+        <relationshipLabel><!-- User Story Tasks --></relationshipLabel>
+    </fields>
+    <recordTypes>
+        <label><!-- Deployment --></label>
+        <name>Deployment</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Marketing Implementation --></label>
+        <name>Marketing_Implementation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Mulesoft Implementation --></label>
+        <name>Mulesoft_Implementation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Salesforce Implementation --></label>
+        <name>Salesforce_Implementation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Technical Specification &amp; Coordination --></label>
+        <name>Technical_Specification_Coordination</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Testing --></label>
+        <name>Testing</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- You are not allowed to reopen tasks --></errorMessage>
+        <name>Do_not_allow_to_Reopen_Tasks</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Sprint Assignment</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Sprint Assignments</value>
+    </caseValues>
+    <fields>
+        <label><!-- Capacity (d) --></label>
+        <name>Capacity_d__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ressource --></label>
+        <name>Ressource__c</name>
+        <relationshipLabel><!-- Sprint Assignments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sprint --></label>
+        <name>Sprint__c</name>
+        <relationshipLabel><!-- Sprint Assignments --></relationshipLabel>
+    </fields>
+    <gender>Neuter</gender>
+</CustomObjectTranslation>

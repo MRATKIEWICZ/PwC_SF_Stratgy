@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Customer Journey</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Customer Journeys</value>
+    </caseValues>
+    <fields>
+        <label><!-- Acceptance Criteria --></label>
+        <name>Acceptance_Criteria__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actor --></label>
+        <name>Actor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Design Effort Total (d) --></label>
+        <name>Actual_Design_Effort_Total_d__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Implementation Effort Total (d) --></label>
+        <name>Actual_Impl_Effort__c</name>
+    </fields>
+    <fields>
+        <label><!-- Architecture - Analytics --></label>
+        <name>Architecture_Analytics__c</name>
+    </fields>
+    <fields>
+        <label><!-- Architecture - Data --></label>
+        <name>Architecture_Data__c</name>
+    </fields>
+    <fields>
+        <label><!-- Architecture - Integration --></label>
+        <name>Architecture_Integration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Architecture - Logic --></label>
+        <name>Architecture_Logic__c</name>
+    </fields>
+    <fields>
+        <label><!-- Architecture - Other --></label>
+        <name>Architecture_Other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Architecture - UI --></label>
+        <name>Architecture_UI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Close Reasons --></label>
+        <name>Close_Reasons__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cloud --></label>
+        <name>Cloud__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Journey Approved By --></label>
+        <name>Customer_Journey_Approved_By__c</name>
+        <relationshipLabel><!-- Customer Journeys (Customer Journey Approved By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Customer Journey Details --></label>
+        <name>Customer_Journey_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deployed to Production --></label>
+        <name>Deployed_to_Production__c</name>
+    </fields>
+    <fields>
+        <label><!-- Implementation Progress --></label>
+        <name>Implementation_Progress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Implementation Size --></label>
+        <name>Implementation_Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- Journey End --></label>
+        <name>Journey_End__c</name>
+    </fields>
+    <fields>
+        <label><!-- Journey Start --></label>
+        <name>Journey_Start__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent --></label>
+        <name>Parent__c</name>
+        <relationshipLabel><!-- Child --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Planned Implementation Effort Total (d) --></label>
+        <name>Planned_Impl_Effort__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>Project__c</name>
+        <relationshipLabel><!-- Customer Journeys --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Architecture Authorization</masterLabel>
+            <translation><!-- Architecture Authorization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation</masterLabel>
+            <translation><!-- Implementation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Design</masterLabel>
+            <translation><!-- In Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Roadmap Prioritization</masterLabel>
+            <translation><!-- In Roadmap Prioritization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Acceptance Test</masterLabel>
+            <translation><!-- User Acceptance Test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Story Creation</masterLabel>
+            <translation><!-- User Story Creation --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Strategic Theme --></label>
+        <name>Strategic_Theme__c</name>
+    </fields>
+    <fields>
+        <label><!-- UAT Approved by --></label>
+        <name>UAT_Approved_by__c</name>
+        <relationshipLabel><!-- Customer Journeys (UAT Approved by) --></relationshipLabel>
+    </fields>
+    <gender>Neuter</gender>
+    <validationRules>
+        <errorMessage><!-- You can deploy to PRD only after UAT --></errorMessage>
+        <name>DeployToPRD</name>
+    </validationRules>
+</CustomObjectTranslation>

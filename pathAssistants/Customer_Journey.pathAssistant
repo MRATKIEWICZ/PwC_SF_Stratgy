@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Customer_Journey__c</entityName>
+    <fieldName>Status__c</fieldName>
+    <masterLabel>Customer Journey</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;Main Actor:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Architects&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Tasks:&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Review and rework Customer Journey if needed. Due to complexity it is important that all Customer Journey components, both business and technical, are described.&lt;/li&gt;&lt;li&gt;Due to the complexity of the Customer Journey, an Architecture Decision is needed and documented in Solution Design.&lt;/li&gt;&lt;li&gt;After completing all details, please &lt;span style=&quot;font-size: 13px;&quot;&gt;push the button &amp;quot;Submit for Approval&amp;quot;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Architecture Authorization</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Customer Journey is closed - reasons for Closure are tracked in the &amp;quot;Close Reason&amp;quot; field.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Closed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;Main Actor:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;UAT Test Team&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Tasks:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;As soon as all User Stories of a Customer Journey are tested successfully, the UAT Test Team can deploy the Customer Journey and the status automatically changes to &amp;quot;Completed&amp;quot;&lt;/p&gt;</info>
+        <picklistValueName>Completed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;Main Actor:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Developer&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Tasks:&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Developers have started to implement the user stories: This phase is just for tracking the progress of the implementation in the User Stories.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Implementation</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;Main Actor:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Business Analysts &amp;amp; Solution Architects&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Tasks:&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Specify the Business and Solution Design: In each step of your Design please track your current activity (e.g. UI Design; Prototyping; et. cetera.)&lt;/li&gt;&lt;li&gt;After completing all activities, change the status to &amp;quot;Architecture Authorization&amp;quot; if Customer Journey is complex (=Implementation Size XL) or to User Story Creation if Customer Journey is less complex (=All other Implementation Sizes).&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>In Design</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;Main Actor:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Project Leads&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Tasks:&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Define the Customer Journey framework for the Approval&lt;/li&gt;&lt;li&gt;After completing all details push the button &amp;quot;Submit for Approval&amp;quot;&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>In Roadmap Prioritization</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;Main Actor:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;UAT Test Team&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Tasks:&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Once all User Stories are developed, tested and deployed, the Customer Journey changes to UAT. In this phase the UAT Test Team is testing all developed features from the User Stories for the Customer Journey.&lt;/li&gt;&lt;li&gt;Tests will be executed according to the assigned Test Cases in the Customer Journey.&lt;/li&gt;&lt;li&gt;After successful tests, the button &amp;quot;Deploy to Production&amp;quot; can be pushed and all developed features from the user stories are deployed.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>User Acceptance Test</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;Main Actor:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Lead Developer&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Tasks:&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Lead Developer creates User Stories based on specification in Business and Solution Design by pushing the button &amp;quot;New User Story&amp;quot;.&lt;/li&gt;&lt;li&gt;After creating all User Stories, the Lead Developer needs to complement the User Story with all technical details.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>User Story Creation</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>martin.ratkiewicz@pwc.com</contactEmail>
+    <label>Copado DX</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+        <certificate>MIIC8TCCAdkCFAmsnhWxc2iBDx+PwXfljkd7ItxyMA0GCSqGSIb3DQEBCwUAMDQxCzAJBgNVBAYTAlVTMQ8wDQYDVQQKDAZDb3BhZG8xFDASBgNVBAMMC3d3dy5jb3BhLmRvMCAXDTIwMTAyMTE4MDQwM1oYDzIxMzAwNDI4MTgwNDAzWjA0MQswCQYDVQQGEwJVUzEPMA0GA1UECgwGQ29wYWRvMRQwEgYDVQQDDAt3d3cuY29wYS5kbzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANnSJf72ajXnqkYUmQVtFXD3GN9Kcd3e257h2YHxkpZHO1Pkp1/G8fMvGwqkdOysGnVX2AOWKO4dmXse95dz8HC6EEjgZTi4AsIAy4r0tHvzV079RIC/hMd2NScfLm47nVu2NHw36W3AsFgkJseOZ9qpAlqn2D3h2vR+UoqI3gqHOrPbHQiJ7h5AUCwWPlfLqyfHh/JC8LVYDKNP8CrMtKlwEQhk6Thu3o3fiwg7fT+O+Qpi/REQfe+yFzjIxLKjLfogtl7vyL6rquKrv4bOp3+3j7aqfhgMj7cuJpdu9A1HQzsO7stSneRcIsBmD0q9yTe63CzjvyNGe+oQFGsNdb0CAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAvvHvNLteOJRQfZsJJv1t/ZDvzpkusjfVaIyMTkFVmMxO97EQsjnkxAFHL2aW8057fnqFgujfHA4O4b86vCndK8hyc1WhH3c4gCJomFGmgOoeSJAhUcOIQVB9WcQ14fa2Y/c7T72lNG3EWqo4vRRswLLFe/3U8DUg3pBF3uBTSLDdAJ/w11qqn7nuBSrRol9/9gZY7dyzYvAOoPRsHqX2jpjiYGl6jNFrS1VeZCec+3jC6IkacvQfQidpc88k3EGKkVdgxGuZOdNYv337PYbObz97EyDSl8U3hLedctdzpRpgeGm99XwrnuW0Nc5Ra2YPkWN+OoioHSkA7Cyh3nGUlQ==</certificate>
+        <consumerKey>e6cdf6f7d56649f5a45d9aad05d0ce7e06ade6714a9d4053a7dddc92df183b78</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Mulesoft Application</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Mulesoft Applications</value>
+    </caseValues>
+    <fields>
+        <label><!-- Application Name --></label>
+        <name>Application_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Environment --></label>
+        <name>Current_Environment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Job URL --></label>
+        <name>Job_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Story Id --></label>
+        <name>User_Story_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Story Task --></label>
+        <name>User_Story_Task__c</name>
+        <relationshipLabel><!-- Mulesoft Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Version --></label>
+        <name>Version__c</name>
+    </fields>
+    <gender>Neuter</gender>
+</CustomObjectTranslation>

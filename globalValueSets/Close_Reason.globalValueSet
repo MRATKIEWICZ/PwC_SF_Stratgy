@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Duplicate</fullName>
+        <default>false</default>
+        <label>Duplicate</label>
+    </customValue>
+    <customValue>
+        <fullName>Rejected</fullName>
+        <default>false</default>
+        <label>Rejected</label>
+    </customValue>
+    <customValue>
+        <fullName>Works as designed</fullName>
+        <default>false</default>
+        <label>Works as designed</label>
+    </customValue>
+    <masterLabel>Close Reason</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

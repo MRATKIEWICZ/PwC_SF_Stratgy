@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Test Case</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Test Cases</value>
+    </caseValues>
+    <fields>
+        <label><!-- Acceptance Criteria --></label>
+        <name>Acceptance_Criteria__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Results --></label>
+        <name>Actual_Results__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Journey --></label>
+        <name>Customer_Journey__c</name>
+        <relationshipLabel><!-- Test Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Environment --></label>
+        <name>Environment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Results --></label>
+        <name>Expected_Results__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Name --></label>
+        <name>Project_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation><!-- Failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Passed</masterLabel>
+            <translation><!-- Passed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reopen</masterLabel>
+            <translation><!-- Reopen --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test Type --></label>
+        <name>Test_Type__c</name>
+        <picklistValues>
+            <masterLabel>Regression Test</masterLabel>
+            <translation><!-- Regression Test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Smoke Test</masterLabel>
+            <translation><!-- Smoke Test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unit Test</masterLabel>
+            <translation><!-- Unit Test --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tester --></label>
+        <name>Tester__c</name>
+        <relationshipLabel><!-- Test Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Total Defects --></label>
+        <name>Total_Defects__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Open Defects --></label>
+        <name>Total_Open_Defects__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Story --></label>
+        <name>User_Story__c</name>
+        <relationshipLabel><!-- Test Cases --></relationshipLabel>
+    </fields>
+    <gender>Neuter</gender>
+    <recordTypes>
+        <label><!-- Development Test --></label>
+        <name>Development_Test</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- User Acceptance Test (UAT) --></label>
+        <name>User_Acceptance_Test_UAT</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please fix all Defects before changing Test Case status to &quot;Passed&quot; --></errorMessage>
+        <name>PreventStatusPassed_If_Defects_Open</name>
+    </validationRules>
+</CustomObjectTranslation>
