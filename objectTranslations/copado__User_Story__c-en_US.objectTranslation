@@ -82,6 +82,10 @@
         <name>Planned_Effort_d__c</name>
     </fields>
     <fields>
+        <label><!-- Planned Prototype Effort (d) --></label>
+        <name>Planned_Prototype_Effort_d__c</name>
+    </fields>
+    <fields>
         <label><!-- Tasks Completed --></label>
         <name>Tasks_Completed__c</name>
     </fields>
@@ -750,12 +754,20 @@
             <translation><!-- Deployment --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Designed</masterLabel>
+            <translation><!-- Designed --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Draft</masterLabel>
             <translation><!-- Draft --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>In Progress</masterLabel>
             <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Ready for UAT</masterLabel>
@@ -852,6 +864,10 @@
         <label><!-- So that... --></label>
         <name>copado__userStory_reason__c</name>
     </fields>
+    <recordTypes>
+        <label><!-- Prototype --></label>
+        <name>Prototype</name>
+    </recordTypes>
     <recordTypes>
         <label><!-- Bug --></label>
         <name>copado__Bug</name>
