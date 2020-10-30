@@ -255,11 +255,6 @@
             <actionType>QuickAction</actionType>
             <sortOrder>8</sortOrder>
         </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Delete</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>9</sortOrder>
-        </platformActionListItems>
     </platformActionList>
     <relatedLists>
         <fields>NAME</fields>
@@ -269,6 +264,8 @@
         <relatedList>copado__User_Story_Task__c.copado__User_Story__c</relatedList>
     </relatedLists>
     <relatedLists>
+        <excludeButtons>MassChangeOwner</excludeButtons>
+        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>RECORDTYPE</fields>
         <fields>Status__c</fields>
@@ -303,6 +300,9 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>Status__c</fields>
+        <fields>Application_Name__c</fields>
+        <fields>Environment__c</fields>
         <relatedList>Mulesoft_Deployment__c.User_Story__c</relatedList>
     </relatedLists>
     <relatedLists>
@@ -334,6 +334,15 @@
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedNoteList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <excludeButtons>MassChangeOwner</excludeButtons>
+        <excludeButtons>New</excludeButtons>
+        <fields>NAME</fields>
+        <fields>Field__c</fields>
+        <fields>New_Value__c</fields>
+        <fields>Duration_Min__c</fields>
+        <relatedList>User_Story_History__c.User_Story__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>

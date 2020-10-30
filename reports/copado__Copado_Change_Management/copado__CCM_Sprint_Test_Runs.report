@@ -15,7 +15,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>In progress</value>
+            <value>In Progress</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>

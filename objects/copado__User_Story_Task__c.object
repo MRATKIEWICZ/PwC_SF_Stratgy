@@ -231,6 +231,15 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Ressource</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Ressource__c.Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
         <referenceTo>Ressource__c</referenceTo>
         <relationshipLabel>User Story Tasks</relationshipLabel>
         <relationshipName>User_Story_Tasks</relationshipName>
