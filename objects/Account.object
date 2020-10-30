@@ -328,11 +328,13 @@
     </fields>
     <fields>
         <fullName>test__c</fullName>
-        <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>test</label>
+        <length>255</length>
+        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
-        <type>Checkbox</type>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <listViews>
         <fullName>AllAccounts</fullName>
