@@ -35,5 +35,5 @@
         <label><!-- Disable Auto-Resolve --></label>
         <name>copado__Disable_Auto_Resolve__c</name>
     </fields>
-    <startsWith><!-- Consonant --></startsWith>
+    
 </CustomObjectTranslation>

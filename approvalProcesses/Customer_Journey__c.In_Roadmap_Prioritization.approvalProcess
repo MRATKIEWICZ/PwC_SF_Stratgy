@@ -9,7 +9,9 @@
         <field>Name</field>
         <field>Strategic_Theme__c</field>
         <field>Project__c</field>
-        <field>Cloud__c</field>
+        <field>Requirements_Summary__c</field>
+        <field>Expert_Estimation_d__c</field>
+        <field>Target_Release__c</field>
         <field>Owner</field>
     </approvalPageFields>
     <approvalStep>

@@ -128,7 +128,7 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <comment>Action override updated by Lightning App Builder during activation.</comment>
         <content>Customer_Journey_Details</content>
         <formFactor>Large</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
@@ -136,7 +136,7 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <comment>Action override updated by Lightning App Builder during activation.</comment>
         <content>Customer_Journey_Details</content>
         <formFactor>Small</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
@@ -156,6 +156,7 @@
         <fields>Actual_Impl_Effort__c</fields>
         <fields>Actual_Design_Effort_Total_d__c</fields>
         <fields>Implementation_Progress__c</fields>
+        <fields>Prototype_Created__c</fields>
         <label>Customer Journey</label>
     </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
@@ -313,6 +314,20 @@
         <visibleLines>4</visibleLines>
     </fields>
     <fields>
+        <fullName>Complexity__c</fullName>
+        <externalId>false</externalId>
+        <label>Complexity</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Implementation_Size</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Customer_Journey_Approved_By__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
@@ -347,6 +362,135 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Design_Completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Design Completed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Detailed_Estimation_d__c</fullName>
+        <externalId>false</externalId>
+        <formula>Estimation_Analytics__c + Estimation_Data_d__c + Estimation_Integration_d__c + Estimation_Logic_d__c + Estimation_Other_d__c + Estimation_UI_d__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Detailed Estimation (d)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Estimation_Analytics__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimation - Analytics (d)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Estimation_Data_d__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimation - Data (d)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Estimation_Highest_d__c</fullName>
+        <externalId>false</externalId>
+        <formula>MAX(Estimation_Analytics__c,Estimation_Data_d__c,Estimation_Integration_d__c,Estimation_Logic_d__c,Estimation_Other_d__c,Estimation_UI_d__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Estimation - Highest (d)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Estimation_Integration_d__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimation - Integration (d)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Estimation_Logic_d__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimation - Logic (d)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Estimation_Other_d__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimation - Other (d)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Estimation_UI_d__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimation - UI (d)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expert_Estimation_d__c</fullName>
+        <externalId>false</externalId>
+        <label>Expert Estimation (d)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Implementation_Progress__c</fullName>
         <defaultValue>0</defaultValue>
         <externalId>false</externalId>
@@ -358,20 +502,6 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Percent</type>
-    </fields>
-    <fields>
-        <fullName>Implementation_Size__c</fullName>
-        <externalId>false</externalId>
-        <label>Implementation Size</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetName>Implementation_Size</valueSetName>
-        </valueSet>
     </fields>
     <fields>
         <fullName>Journey_End__c</fullName>
@@ -440,6 +570,40 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Prototype_Approved_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Prototype Approved By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Customer_Journeys2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Prototype_Created__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Prototype Created</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Requirements_Summary__c</fullName>
+        <externalId>false</externalId>
+        <label>Requirements Summary</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
         <fullName>Status__c</fullName>
         <externalId>false</externalId>
         <label>Status</label>
@@ -461,6 +625,11 @@
                     <fullName>In Design</fullName>
                     <default>false</default>
                     <label>In Design</label>
+                </value>
+                <value>
+                    <fullName>Prototyping</fullName>
+                    <default>false</default>
+                    <label>Prototyping</label>
                 </value>
                 <value>
                     <fullName>Architecture Authorization</fullName>
@@ -508,6 +677,20 @@
             <restricted>true</restricted>
             <valueSetName>Strategic_Theme</valueSetName>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>Target_Release__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Target Release</label>
+        <referenceTo>copado__Release__c</referenceTo>
+        <relationshipLabel>Customer Journeys</relationshipLabel>
+        <relationshipName>Customer_Journeys</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>UAT_Approved_by__c</fullName>

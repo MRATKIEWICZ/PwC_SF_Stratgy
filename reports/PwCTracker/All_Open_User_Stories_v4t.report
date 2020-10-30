@@ -11,6 +11,13 @@
             <operator>notEqual</operator>
             <value>Completed,Cancelled,Closed</value>
         </criteriaItems>
+        <criteriaItems>
+            <column>CUST_RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>copado__User_Story__c.copado__User_Story</value>
+        </criteriaItems>
     </filter>
     <format>Summary</format>
     <groupingsDown>

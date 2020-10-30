@@ -59,6 +59,22 @@
         <label>Overdue</label>
         <scale>2</scale>
     </customDetailFormulas>
+    <filter>
+        <criteriaItems>
+            <column>copado__Project__c$Id</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>a0o09000000wuyv</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>copado__Project__c.copado__Sprints__r.copado__User_Stories__r$RecordType</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>copado__User_Story__c.copado__User_Story</value>
+        </criteriaItems>
+    </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
