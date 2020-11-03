@@ -3,8 +3,8 @@
     <assignments>
         <name>Add_Old_Efforts</name>
         <label>Add Old Efforts</label>
-        <locationX>182</locationX>
-        <locationY>614</locationY>
+        <locationX>314</locationX>
+        <locationY>1190</locationY>
         <assignmentItems>
             <assignToReference>varTaskEffort</assignToReference>
             <operator>Add</operator>
@@ -17,10 +17,35 @@
         </connector>
     </assignments>
     <decisions>
+        <name>Time_Sheet_existing</name>
+        <label>Time Sheet existing?</label>
+        <locationX>314</locationX>
+        <locationY>278</locationY>
+        <defaultConnector>
+            <targetReference>Get_Active_Timesheet</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Timesheet</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varTimeSheetId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>What_kind_of_Effort</targetReference>
+            </connector>
+            <label>Yes_Timesheet</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>What_kind_of_Effort</name>
         <label>What kind of Effort?</label>
-        <locationX>182</locationX>
-        <locationY>278</locationY>
+        <locationX>314</locationX>
+        <locationY>854</locationY>
         <defaultConnector>
             <targetReference>Update_User_Story_Task</targetReference>
         </defaultConnector>
@@ -39,6 +64,21 @@
                 <targetReference>Update_Customer_Journey_Task</targetReference>
             </connector>
             <label>Design Effort</label>
+        </rules>
+        <rules>
+            <name>Architecture_Effort</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>IsArchitectEffort</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Architecture_Task</targetReference>
+            </connector>
+            <label>Architecture Effort</label>
         </rules>
     </decisions>
     <interviewLabel>Time Sheet - Update Efforts {!$Flow.CurrentDateTime}</interviewLabel>
@@ -62,14 +102,55 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Time_Sheet</name>
+        <label>Create Time Sheet</label>
+        <locationX>402</locationX>
+        <locationY>638</locationY>
+        <assignRecordIdToReference>varTimeSheetId</assignRecordIdToReference>
+        <connector>
+            <targetReference>What_kind_of_Effort</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Active__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Effort_d__c</field>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>{!varRessourceName} - Week from: {!varStartDate}</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Ressource__c</field>
+            <value>
+                <elementReference>varRessource</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Start_Date__c</field>
+            <value>
+                <elementReference>varStartDate</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Time_Sheet__c</object>
+    </recordCreates>
     <recordLookups>
         <name>Get_Active_Time_Sheet</name>
         <label>Get Active Time Sheet</label>
-        <locationX>182</locationX>
+        <locationX>314</locationX>
         <locationY>158</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>What_kind_of_Effort</targetReference>
+            <targetReference>Time_Sheet_existing</targetReference>
         </connector>
         <filters>
             <field>Active__c</field>
@@ -95,11 +176,98 @@
             <field>Id</field>
         </outputAssignments>
     </recordLookups>
+    <recordLookups>
+        <name>Get_Active_Timesheet</name>
+        <label>Get Active Timesheet</label>
+        <locationX>402</locationX>
+        <locationY>398</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Ressource_Name</targetReference>
+        </connector>
+        <filters>
+            <field>Active__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>End_Date__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Start_Date__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Time_Sheet__c</object>
+        <outputAssignments>
+            <assignToReference>varStartDate</assignToReference>
+            <field>Start_Date__c</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Ressource_Name</name>
+        <label>Get Ressource Name</label>
+        <locationX>402</locationX>
+        <locationY>518</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Create_Time_Sheet</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varRessource</elementReference>
+            </value>
+        </filters>
+        <object>Ressource__c</object>
+        <outputAssignments>
+            <assignToReference>varRessourceName</assignToReference>
+            <field>Name</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Architecture_Task</name>
+        <label>Update Architecture Task</label>
+        <locationX>314</locationX>
+        <locationY>974</locationY>
+        <connector>
+            <targetReference>Add_Old_Efforts</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varTask</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Efforts_Submitted__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Time_Sheet__c</field>
+            <value>
+                <elementReference>varTimeSheetId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Architecture_Task__c</object>
+    </recordUpdates>
     <recordUpdates>
         <name>Update_Customer_Journey_Task</name>
         <label>Update Customer Journey Task</label>
         <locationX>50</locationX>
-        <locationY>398</locationY>
+        <locationY>974</locationY>
         <connector>
             <targetReference>Add_Old_Efforts</targetReference>
         </connector>
@@ -127,8 +295,8 @@
     <recordUpdates>
         <name>Update_Time_Sheet</name>
         <label>Update Time Sheet</label>
-        <locationX>182</locationX>
-        <locationY>734</locationY>
+        <locationX>314</locationX>
+        <locationY>1310</locationY>
         <filters>
             <field>Id</field>
             <operator>EqualTo</operator>
@@ -147,8 +315,8 @@
     <recordUpdates>
         <name>Update_User_Story_Task</name>
         <label>Update User Story Task</label>
-        <locationX>314</locationX>
-        <locationY>398</locationY>
+        <locationX>578</locationX>
+        <locationY>974</locationY>
         <connector>
             <targetReference>Add_Old_Efforts</targetReference>
         </connector>
@@ -174,13 +342,20 @@
         <object>copado__User_Story_Task__c</object>
     </recordUpdates>
     <start>
-        <locationX>56</locationX>
+        <locationX>188</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_Active_Time_Sheet</targetReference>
         </connector>
     </start>
     <status>Active</status>
+    <variables>
+        <name>IsArchitectEffort</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
     <variables>
         <name>isDesignEffort</name>
         <dataType>Boolean</dataType>
@@ -205,6 +380,20 @@
     <variables>
         <name>varRessource</name>
         <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>varRessourceName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>varStartDate</name>
+        <dataType>DateTime</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>
         <isOutput>true</isOutput>

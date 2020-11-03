@@ -25,6 +25,15 @@
         <label>Overdue</label>
         <scale>2</scale>
     </customDetailFormulas>
+    <filter>
+        <criteriaItems>
+            <column>copado__Project__c.copado__Sprints__r.copado__User_Stories__r$RecordType</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>copado__User_Story__c.copado__User_Story</value>
+        </criteriaItems>
+    </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
@@ -38,7 +47,7 @@
     </groupingsDown>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>copado__Project__c.copado__Sprints__r$copado__Status__c</field>
+        <field>copado__Project__c.copado__Sprints__r.copado__User_Stories__r$copado__Status__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Projects with Sprints and User Stories</name>

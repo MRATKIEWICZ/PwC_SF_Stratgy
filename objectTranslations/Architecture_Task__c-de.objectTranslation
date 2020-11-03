@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Architecture Task</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Architecture Tasks</value>
+    </caseValues>
+    <fields>
+        <label><!-- Architecture --></label>
+        <name>Architecture__c</name>
+        <relationshipLabel><!-- Architecture Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Effort (d) --></label>
+        <name>Effort_d__c</name>
+    </fields>
+    <fields>
+        <label><!-- Efforts Submitted --></label>
+        <name>Efforts_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Onsite --></label>
+        <name>Onsite__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ressource --></label>
+        <name>Ressource__c</name>
+        <relationshipLabel><!-- Architecture Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Description --></label>
+        <name>Task_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Team --></label>
+        <name>Team__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Sheet --></label>
+        <name>Time_Sheet__c</name>
+        <relationshipLabel><!-- Architecture Tasks --></relationshipLabel>
+    </fields>
+    <gender>Neuter</gender>
+    <validationRules>
+        <errorMessage><!-- You are not allowed to reopen tasks --></errorMessage>
+        <name>Do_not_allow_to_Reopen_Tasks</name>
+    </validationRules>
+</CustomObjectTranslation>

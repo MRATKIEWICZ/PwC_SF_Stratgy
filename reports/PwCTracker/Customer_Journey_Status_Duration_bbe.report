@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>Customer_Journey_History__c.Duration_min__c:SUM/Customer_Journey_History__c.Customer_Journey__c.Name:UNIQUE</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Avarage Duration</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Customer_Journey_History__c$Duration_min__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Customer_Journey_History__c$Field__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Status</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Customer_Journey_History__c$New_Value__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Customer Journey Status Duration</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Customer_Journey_History_Custom__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Customer_Journey_History__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

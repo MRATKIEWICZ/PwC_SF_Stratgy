@@ -61,12 +61,16 @@
         <label><!-- Type --></label>
         <name>Type__c</name>
         <picklistValues>
-            <masterLabel>Architecture Review</masterLabel>
-            <translation><!-- Architecture Review --></translation>
+            <masterLabel>Architecture Work</masterLabel>
+            <translation><!-- Architecture Work --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Business Design</masterLabel>
             <translation><!-- Business Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prototyping</masterLabel>
+            <translation><!-- Prototyping --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Solution Design</masterLabel>
