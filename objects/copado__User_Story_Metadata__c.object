@@ -210,6 +210,28 @@
         <label>Copado User Story Metadata Columns</label>
     </fieldSets>
     <fields>
+        <fullName>Metadata_Type_Help__c</fullName>
+        <externalId>false</externalId>
+        <formula>SUBSTITUTE(Name, LEFT(Name, FIND(&quot; &quot;, Name)), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Metadata Type Help</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Metadata_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>Trim(Left(Metadata_Type_Help__c , FIND(&quot;.&quot;, Metadata_Type_Help__c )-1))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Metadata Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Last_Commit_Date__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>

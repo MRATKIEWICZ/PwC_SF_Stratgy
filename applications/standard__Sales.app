@@ -18,5 +18,6 @@
     <tabs>Customer_Journey__c</tabs>
     <tabs>Time_Sheet__c</tabs>
     <tabs>Ressource__c</tabs>
+    <tabs>standard-WaveHome</tabs>
     <uiType>Aloha</uiType>
 </CustomApplication>

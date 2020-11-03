@@ -16,6 +16,7 @@
     <tabs>Customer_Journey__c</tabs>
     <tabs>Time_Sheet__c</tabs>
     <tabs>Ressource__c</tabs>
+    <tabs>standard-WaveHomeLightning</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningService_UtilityBar</utilityBar>
     <workspaceConfig>
@@ -39,6 +40,9 @@
         </mappings>
         <mappings>
             <tab>standard-Dashboard</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-WaveHomeLightning</tab>
         </mappings>
         <mappings>
             <tab>standard-home</tab>

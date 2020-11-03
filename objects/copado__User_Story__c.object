@@ -128,26 +128,27 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>User_Story_Details</content>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <formFactor>Large</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
+        <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>User_Story_Details</content>
         <formFactor>Small</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>User_Story</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Prototype</fullName>
+        <fields>copado__User_Story_Title__c</fields>
+        <fields>OwnerId</fields>
+        <fields>Planned_Prototype_Effort_d__c</fields>
+        <label>Prototype</label>
+    </compactLayouts>
     <compactLayouts>
         <fullName>User_Story</fullName>
         <fields>copado__User_Story_Title__c</fields>
@@ -4860,6 +4861,20 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Planned_Prototype_Effort_d__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Planned Prototype Effort (d)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Tasks_Completed__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -6192,6 +6207,16 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
                     <default>false</default>
                     <label>Closed</label>
                 </value>
+                <value>
+                    <fullName>New</fullName>
+                    <default>false</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Designed</fullName>
+                    <default>false</default>
+                    <label>Designed</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -6439,6 +6464,25 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
         </sharedTo>
     </listViews>
     <listViews>
+        <fullName>All_Prototypes</fullName>
+        <columns>NAME</columns>
+        <columns>copado__User_Story_Title__c</columns>
+        <columns>copado__Project__c</columns>
+        <columns>copado__Sprint__c</columns>
+        <columns>copado__Release__c</columns>
+        <columns>copado__Status__c</columns>
+        <columns>Planned_Effort_d__c</columns>
+        <columns>Actual_Effort_d__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>copado__User_Story__c.Prototype</value>
+        </filters>
+        <label>All Prototypes</label>
+    </listViews>
+    <listViews>
         <fullName>Approval_User_Story</fullName>
         <filterScope>Queue</filterScope>
         <label>Approval</label>
@@ -6524,6 +6568,7 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
         <columns>copado__Status__c</columns>
         <columns>Planned_Effort_d__c</columns>
         <columns>Actual_Effort_d__c</columns>
+        <columns>LAST_UPDATE</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>RECORDTYPE</field>
@@ -6558,6 +6603,422 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
     <pluralLabel>User Stories</pluralLabel>
     <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Prototype</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>Prototype</compactLayoutAssignment>
+        <label>Prototype</label>
+        <picklistValues>
+            <picklist>copado__Acceptance_Criteria_Status__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Compliance_Status__c</picklist>
+            <values>
+                <fullName>Completed - Findings detected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed - No Findings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed - Resolved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Under Investigation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Git_Merge_Status__c</picklist>
+            <values>
+                <fullName>Conflicts Detected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mergeable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Metadata_Types_in_Selection__c</picklist>
+            <values>
+                <fullName>ActionLinkGroupTemplate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AnalyticSnapshot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ApexClass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ApexComponent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ApexPage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ApexTrigger</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AppMenu</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ApprovalProcess</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AssignmentRule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AssignmentRules</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AuraDefinitionBundle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AuthProvider</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AutoResponseRule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AutoResponseRules</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BusinessProcess</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CallCenter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certificate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ChannelLayout</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CompactLayout</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ConnectedApp</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CorsWhitelistOrigin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomApplication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomField</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomLabel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomLabels</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomMetadata</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomObject</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomObjectTranslation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomPageWebLink</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomPermission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomSite</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomTab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dashboard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DataCategoryGroup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DelegateGroup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Document</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EmailTemplate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EscalationRule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EscalationRules</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ExternalDataSource</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FieldSet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FlexiPaFlow</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FlowDefinitioGroup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HomePageComponent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HomePageLayout</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>InstalledPackageLayout</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Letterhead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ListView</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MatchingRule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MatchingRules</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NamedCredential</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PathAssistant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PermissionSet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PlatformCachePartition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PostTemplate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ProfilQueue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QuickAction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RecordType</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RemoteSiteSettingReport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ReportTyRole</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SamlSsoConfig</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scontrol</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Settings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SharingCriteriaRule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SharingOwnerRule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SharingReason</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SharingRules</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SiteDotCom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>StaticResource</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SynonymDictionary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Translations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ValidationRule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WebLink</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workflow</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WorkflowAlert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WorkflowFieldUpdate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WorkflowOutboundMessage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WorkflowRule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WorkflowSend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WorkflowTask</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Promotion_Test_Level__c</picklist>
+            <values>
+                <fullName>NoTestRun</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>RunAllTestsInOrg</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RunLocalTests</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RunSpecifiedTests</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Status__c</picklist>
+            <values>
+                <fullName>Designed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
     <recordTypes>
         <fullName>copado__Bug</fullName>
         <active>true</active>
