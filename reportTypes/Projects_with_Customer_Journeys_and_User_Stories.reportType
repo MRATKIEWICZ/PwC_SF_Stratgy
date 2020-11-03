@@ -199,7 +199,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Implementation_Size__c</field>
+            <field>Complexity__c</field>
             <table>copado__Project__c.Customer_Journeys__r</table>
         </columns>
         <columns>

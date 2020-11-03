@@ -17,7 +17,7 @@
         <picklistValueName>Deployment</picklistValueName>
     </pathAssistantSteps>
     <pathAssistantSteps>
-        <info>&lt;p&gt;&lt;b&gt;Main Actor:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Developer&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Tasks:&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Tracking of Implementation Progress.&lt;/li&gt;&lt;li&gt;Documentation of Implementation.&lt;/li&gt;&lt;li&gt;Documentation of spend Effort in days.&lt;/li&gt;&lt;li&gt;Change status to &amp;quot;Completed&amp;quot;.&lt;/li&gt;&lt;li&gt;Upload all changes to GIT.&lt;/li&gt;&lt;li&gt;Push Button &amp;quot;Promote and Deploy&amp;quot; to push features to DEV.&lt;/li&gt;&lt;/ul&gt;</info>
+        <info>&lt;p&gt;&lt;b&gt;Main Actor:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Developer&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Tasks:&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Tracking of Implementation Progress.&lt;/li&gt;&lt;li&gt;Documentation of Implementation.&lt;/li&gt;&lt;li&gt;Documentation of spend Effort in days.&lt;/li&gt;&lt;li&gt;Change status to &amp;quot;Completed&amp;quot;.&lt;/li&gt;&lt;li&gt;Documentation of Testing.&lt;/li&gt;&lt;li&gt;Upload all changes to GIT.&lt;/li&gt;&lt;li&gt;Push Button &amp;quot;Promote and Deploy&amp;quot; to push features to DEV.&lt;/li&gt;&lt;/ul&gt;</info>
         <picklistValueName>In Progress</picklistValueName>
     </pathAssistantSteps>
     <pathAssistantSteps>

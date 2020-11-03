@@ -10,17 +10,82 @@
         <processMetadataValues>
             <name>flowSelection</name>
             <value>
-                <stringValue>User Story - Reopen Mulesoft Tasks</stringValue>
+                <stringValue>User Story - Mulesoft Deployment</stringValue>
             </value>
         </processMetadataValues>
-        <name>myRule_10_A1</name>
-        <label>Reopen Mulesoft Tasks</label>
-        <locationX>1000</locationX>
+        <name>myRule_12_A1</name>
+        <label>Mulesoft Deployment</label>
+        <locationX>1200</locationX>
         <locationY>200</locationY>
-        <actionName>User_Story_Reopen_Mulesoft_Tasks</actionName>
+        <actionName>User_Story_Mulesoft_Deployment</actionName>
         <actionType>flow</actionType>
         <connector>
-            <targetReference>myRule_10_A2</targetReference>
+            <targetReference>myDecision14</targetReference>
+        </connector>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varUserStoryId</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varUserStoryId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>ActionCallType</name>
+            <value>
+                <stringValue>flow</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>flowSelection</name>
+            <value>
+                <stringValue>Customer Journey &amp; User Story - Create &amp; Update History</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_15_A3</name>
+        <label>Track Status Changes</label>
+        <locationX>1500</locationX>
+        <locationY>400</locationY>
+        <actionName>Customer_Journey_User_Story_Create_Update_History</actionName>
+        <actionType>flow</actionType>
+        <connector>
+            <targetReference>myDecision18</targetReference>
         </connector>
         <inputParameters>
             <processMetadataValues>
@@ -64,29 +129,6 @@
                 <elementReference>myVariable_current.Id</elementReference>
             </value>
         </inputParameters>
-    </actionCalls>
-    <actionCalls>
-        <processMetadataValues>
-            <name>ActionCallType</name>
-            <value>
-                <stringValue>flow</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>flowSelection</name>
-            <value>
-                <stringValue>User Story - Jenkins Callout</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>myRule_14_A1</name>
-        <label>Callout to Jenkins</label>
-        <locationX>1400</locationX>
-        <locationY>200</locationY>
-        <actionName>User_Story_Jenkins_Callout</actionName>
-        <actionType>flow</actionType>
-        <connector>
-            <targetReference>myDecision16</targetReference>
-        </connector>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -103,7 +145,7 @@
             <processMetadataValues>
                 <name>leftHandSideLabel</name>
                 <value>
-                    <stringValue>varUserStory</stringValue>
+                    <stringValue>varNewValue</stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -121,12 +163,96 @@
             <processMetadataValues>
                 <name>rightHandSideType</name>
                 <value>
-                    <stringValue>Reference</stringValue>
+                    <stringValue>String</stringValue>
                 </value>
             </processMetadataValues>
-            <name>varUserStory</name>
+            <name>varNewValue</name>
             <value>
-                <elementReference>myVariable_current.Id</elementReference>
+                <stringValue>Testing</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varOldValue</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varOldValue</name>
+            <value>
+                <stringValue>text(priorvalue([copado__User_Story__c].Status__c ))</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varField</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varField</name>
+            <value>
+                <stringValue>Status</stringValue>
             </value>
         </inputParameters>
     </actionCalls>
@@ -143,14 +269,14 @@
                 <stringValue>User Story - Update Environment</stringValue>
             </value>
         </processMetadataValues>
-        <name>myRule_23_A1</name>
+        <name>myRule_21_A1</name>
         <label>Update Environment</label>
-        <locationX>2300</locationX>
+        <locationX>2100</locationX>
         <locationY>200</locationY>
         <actionName>User_Story_Update_Environment</actionName>
         <actionType>flow</actionType>
         <connector>
-            <targetReference>myDecision24</targetReference>
+            <targetReference>myDecision22</targetReference>
         </connector>
         <inputParameters>
             <processMetadataValues>
@@ -250,14 +376,79 @@
                 <stringValue>User Story - Set Customer Journey to UAT</stringValue>
             </value>
         </processMetadataValues>
-        <name>myRule_25_A1</name>
+        <name>myRule_23_A1</name>
         <label>Check all User Stories for Readiness</label>
-        <locationX>2500</locationX>
+        <locationX>2300</locationX>
         <locationY>200</locationY>
         <actionName>User_Story_Set_Customer_Journey_to_UAT</actionName>
         <actionType>flow</actionType>
         <connector>
-            <targetReference>myRule_25_A2</targetReference>
+            <targetReference>myRule_23_A2</targetReference>
+        </connector>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varCustomerJourney</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varCustomerJourney</name>
+            <value>
+                <elementReference>myVariable_current.Customer_Journey__c</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>ActionCallType</name>
+            <value>
+                <stringValue>flow</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>flowSelection</name>
+            <value>
+                <stringValue>User Story - Customer Journey Calculation</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_26_A1</name>
+        <label>Calculate Customer Journey</label>
+        <locationX>2600</locationX>
+        <locationY>200</locationY>
+        <actionName>User_Story_Customer_Journey_Calculation</actionName>
+        <actionType>flow</actionType>
+        <connector>
+            <targetReference>myDecision27</targetReference>
         </connector>
         <inputParameters>
             <processMetadataValues>
@@ -322,72 +513,7 @@
         <actionName>User_Story_Customer_Journey_Calculation</actionName>
         <actionType>flow</actionType>
         <connector>
-            <targetReference>myDecision29</targetReference>
-        </connector>
-        <inputParameters>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>varCustomerJourney</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>maxOccurs</name>
-                <value>
-                    <numberValue>1.0</numberValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>objectType</name>
-                <value>
-                    <stringValue></stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Reference</stringValue>
-                </value>
-            </processMetadataValues>
-            <name>varCustomerJourney</name>
-            <value>
-                <elementReference>myVariable_current.Customer_Journey__c</elementReference>
-            </value>
-        </inputParameters>
-    </actionCalls>
-    <actionCalls>
-        <processMetadataValues>
-            <name>ActionCallType</name>
-            <value>
-                <stringValue>flow</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>flowSelection</name>
-            <value>
-                <stringValue>User Story - Customer Journey Calculation</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>myRule_30_A1</name>
-        <label>Calculate Customer Journey</label>
-        <locationX>3000</locationX>
-        <locationY>200</locationY>
-        <actionName>User_Story_Customer_Journey_Calculation</actionName>
-        <actionType>flow</actionType>
-        <connector>
-            <targetReference>myDecision33</targetReference>
+            <targetReference>myDecision31</targetReference>
         </connector>
         <inputParameters>
             <processMetadataValues>
@@ -428,7 +554,7 @@
             </processMetadataValues>
             <name>varCustomerJourney</name>
             <value>
-                <elementReference>formula_32_myRule_30_A1_9404649759</elementReference>
+                <elementReference>formula_30_myRule_28_A1_1227065957</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -445,14 +571,14 @@
                 <stringValue>User Story - Sprint Calculation</stringValue>
             </value>
         </processMetadataValues>
-        <name>myRule_34_A1</name>
+        <name>myRule_32_A1</name>
         <label>Calculate Sprint</label>
-        <locationX>3400</locationX>
+        <locationX>3200</locationX>
         <locationY>200</locationY>
         <actionName>User_Story_Sprint_Calculation</actionName>
         <actionType>flow</actionType>
         <connector>
-            <targetReference>myDecision35</targetReference>
+            <targetReference>myDecision33</targetReference>
         </connector>
         <inputParameters>
             <processMetadataValues>
@@ -510,12 +636,15 @@
                 <stringValue>User Story - Sprint Calculation</stringValue>
             </value>
         </processMetadataValues>
-        <name>myRule_36_A1</name>
+        <name>myRule_34_A1</name>
         <label>Calculate Sprint</label>
-        <locationX>3600</locationX>
+        <locationX>3400</locationX>
         <locationY>200</locationY>
         <actionName>User_Story_Sprint_Calculation</actionName>
         <actionType>flow</actionType>
+        <connector>
+            <targetReference>myDecision37</targetReference>
+        </connector>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -555,53 +684,468 @@
             </processMetadataValues>
             <name>varSprint</name>
             <value>
-                <elementReference>formula_38_myRule_36_A1_2855309657</elementReference>
+                <elementReference>formula_36_myRule_34_A1_8694210616</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>ActionCallType</name>
+            <value>
+                <stringValue>flow</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>flowSelection</name>
+            <value>
+                <stringValue>Customer Journey &amp; User Story - Create &amp; Update History</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_38_A1</name>
+        <label>Create and Update History Records</label>
+        <locationX>3800</locationX>
+        <locationY>200</locationY>
+        <actionName>Customer_Journey_User_Story_Create_Update_History</actionName>
+        <actionType>flow</actionType>
+        <connector>
+            <targetReference>myDecision40</targetReference>
+        </connector>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varUserStory</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varUserStory</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varField</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varField</name>
+            <value>
+                <stringValue>Status</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varNewValue</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varNewValue</name>
+            <value>
+                <elementReference>myVariable_current.copado__Status__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varOldValue</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varOldValue</name>
+            <value>
+                <elementReference>formula_39_myRule_38_A1_5236643587</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>ActionCallType</name>
+            <value>
+                <stringValue>flow</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>flowSelection</name>
+            <value>
+                <stringValue>Customer Journey &amp; User Story - Create &amp; Update History</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_4_A2</name>
+        <label>Track Status Changes</label>
+        <locationX>400</locationX>
+        <locationY>300</locationY>
+        <actionName>Customer_Journey_User_Story_Create_Update_History</actionName>
+        <actionType>flow</actionType>
+        <connector>
+            <targetReference>myDecision7</targetReference>
+        </connector>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varUserStory</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varUserStory</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varField</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varField</name>
+            <value>
+                <stringValue>Status</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varNewValue</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varNewValue</name>
+            <value>
+                <stringValue>Deployment</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varOldValue</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varOldValue</name>
+            <value>
+                <elementReference>formula_6_myRule_4_A2_5280751949</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>ActionCallType</name>
+            <value>
+                <stringValue>flow</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>flowSelection</name>
+            <value>
+                <stringValue>User Story - Reopen Mulesoft Tasks</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_8_A1</name>
+        <label>Reopen Mulesoft Tasks</label>
+        <locationX>800</locationX>
+        <locationY>200</locationY>
+        <actionName>User_Story_Reopen_Mulesoft_Tasks</actionName>
+        <actionType>flow</actionType>
+        <connector>
+            <targetReference>myRule_8_A2</targetReference>
+        </connector>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varUserStory</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varUserStory</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
     <decisions>
-        <name>isChangedDecision11_myRule_10_Environment_Name_c</name>
-        <label>isChangedDecision11_myRule_10_Environment_Name_c</label>
+        <name>isChangedDecision13_myRule_12_copado_Promote_and_Deploy_c</name>
+        <label>isChangedDecision13_myRule_12_copado_Promote_and_Deploy_c</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>isChangedDecision15_myRule_14_copado_Promote_and_Deploy_c</targetReference>
+            <targetReference>isChangedDecision16_myRule_15_Environment_Name_c</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>isChangedRule_11_myRule_10_Environment_Name_c</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>myVariable_old</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>myVariable_old.Environment_Name__c</leftValueReference>
-                <operator>NotEqualTo</operator>
-                <rightValue>
-                    <elementReference>myVariable_current.Environment_Name__c</elementReference>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>isChangedDecision15_myRule_14_copado_Promote_and_Deploy_c</targetReference>
-            </connector>
-            <label>isChangedRule_11_myRule_10_Environment_Name_c</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>isChangedDecision15_myRule_14_copado_Promote_and_Deploy_c</name>
-        <label>isChangedDecision15_myRule_14_copado_Promote_and_Deploy_c</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>isChangedDecision18_myRule_17_Environment_Name_c</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>default</defaultConnectorLabel>
-        <rules>
-            <name>isChangedRule_15_myRule_14_copado_Promote_and_Deploy_c</name>
+            <name>isChangedRule_13_myRule_12_copado_Promote_and_Deploy_c</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>myVariable_old</leftValueReference>
@@ -618,22 +1162,22 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>isChangedDecision18_myRule_17_Environment_Name_c</targetReference>
+                <targetReference>isChangedDecision16_myRule_15_Environment_Name_c</targetReference>
             </connector>
-            <label>isChangedRule_15_myRule_14_copado_Promote_and_Deploy_c</label>
+            <label>isChangedRule_13_myRule_12_copado_Promote_and_Deploy_c</label>
         </rules>
     </decisions>
     <decisions>
-        <name>isChangedDecision18_myRule_17_Environment_Name_c</name>
-        <label>isChangedDecision18_myRule_17_Environment_Name_c</label>
+        <name>isChangedDecision16_myRule_15_Environment_Name_c</name>
+        <label>isChangedDecision16_myRule_15_Environment_Name_c</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>isChangedDecision26_myRule_25_copado_Status_c</targetReference>
+            <targetReference>isChangedDecision24_myRule_23_copado_Status_c</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>isChangedRule_18_myRule_17_Environment_Name_c</name>
+            <name>isChangedRule_16_myRule_15_Environment_Name_c</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>myVariable_old</leftValueReference>
@@ -650,22 +1194,22 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>isChangedDecision26_myRule_25_copado_Status_c</targetReference>
+                <targetReference>isChangedDecision24_myRule_23_copado_Status_c</targetReference>
             </connector>
-            <label>isChangedRule_18_myRule_17_Environment_Name_c</label>
+            <label>isChangedRule_16_myRule_15_Environment_Name_c</label>
         </rules>
     </decisions>
     <decisions>
-        <name>isChangedDecision26_myRule_25_copado_Status_c</name>
-        <label>isChangedDecision26_myRule_25_copado_Status_c</label>
+        <name>isChangedDecision24_myRule_23_copado_Status_c</name>
+        <label>isChangedDecision24_myRule_23_copado_Status_c</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>isChangedDecision31_myRule_30_Customer_Journey_c</targetReference>
+            <targetReference>isChangedDecision29_myRule_28_Customer_Journey_c</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>isChangedRule_26_myRule_25_copado_Status_c</name>
+            <name>isChangedRule_24_myRule_23_copado_Status_c</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>myVariable_old</leftValueReference>
@@ -682,9 +1226,41 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>isChangedDecision31_myRule_30_Customer_Journey_c</targetReference>
+                <targetReference>isChangedDecision29_myRule_28_Customer_Journey_c</targetReference>
             </connector>
-            <label>isChangedRule_26_myRule_25_copado_Status_c</label>
+            <label>isChangedRule_24_myRule_23_copado_Status_c</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>isChangedDecision29_myRule_28_Customer_Journey_c</name>
+        <label>isChangedDecision29_myRule_28_Customer_Journey_c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>isChangedDecision35_myRule_34_copado_Sprint_c</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>isChangedRule_29_myRule_28_Customer_Journey_c</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_old</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>myVariable_old.Customer_Journey__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>myVariable_current.Customer_Journey__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>isChangedDecision35_myRule_34_copado_Sprint_c</targetReference>
+            </connector>
+            <label>isChangedRule_29_myRule_28_Customer_Journey_c</label>
         </rules>
     </decisions>
     <decisions>
@@ -693,7 +1269,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>isChangedDecision5_myRule_4_copado_Status_c</targetReference>
+            <targetReference>isChangedDecision5_myRule_4_Environment_Name_c</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
@@ -714,54 +1290,22 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>isChangedDecision5_myRule_4_copado_Status_c</targetReference>
+                <targetReference>isChangedDecision5_myRule_4_Environment_Name_c</targetReference>
             </connector>
             <label>isChangedRule_2_myRule_1_copado_Status_c</label>
         </rules>
     </decisions>
     <decisions>
-        <name>isChangedDecision31_myRule_30_Customer_Journey_c</name>
-        <label>isChangedDecision31_myRule_30_Customer_Journey_c</label>
+        <name>isChangedDecision35_myRule_34_copado_Sprint_c</name>
+        <label>isChangedDecision35_myRule_34_copado_Sprint_c</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>isChangedDecision37_myRule_36_copado_Sprint_c</targetReference>
+            <targetReference>isChangedDecision42_myRule_41_Actual_Effort_d_c</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>isChangedRule_31_myRule_30_Customer_Journey_c</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>myVariable_old</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>myVariable_old.Customer_Journey__c</leftValueReference>
-                <operator>NotEqualTo</operator>
-                <rightValue>
-                    <elementReference>myVariable_current.Customer_Journey__c</elementReference>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>isChangedDecision37_myRule_36_copado_Sprint_c</targetReference>
-            </connector>
-            <label>isChangedRule_31_myRule_30_Customer_Journey_c</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>isChangedDecision37_myRule_36_copado_Sprint_c</name>
-        <label>isChangedDecision37_myRule_36_copado_Sprint_c</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>myDecision</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>default</defaultConnectorLabel>
-        <rules>
-            <name>isChangedRule_37_myRule_36_copado_Sprint_c</name>
+            <name>isChangedRule_35_myRule_34_copado_Sprint_c</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>myVariable_old</leftValueReference>
@@ -778,22 +1322,86 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myDecision</targetReference>
+                <targetReference>isChangedDecision42_myRule_41_Actual_Effort_d_c</targetReference>
             </connector>
-            <label>isChangedRule_37_myRule_36_copado_Sprint_c</label>
+            <label>isChangedRule_35_myRule_34_copado_Sprint_c</label>
         </rules>
     </decisions>
     <decisions>
-        <name>isChangedDecision5_myRule_4_copado_Status_c</name>
-        <label>isChangedDecision5_myRule_4_copado_Status_c</label>
+        <name>isChangedDecision42_myRule_41_Actual_Effort_d_c</name>
+        <label>isChangedDecision42_myRule_41_Actual_Effort_d_c</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>isChangedDecision8_myRule_7_Environment_Name_c</targetReference>
+            <targetReference>isChangedDecision43_myRule_41_Planned_Effort_d_c</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>isChangedRule_5_myRule_4_copado_Status_c</name>
+            <name>isChangedRule_42_myRule_41_Actual_Effort_d_c</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_old</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>myVariable_old.Actual_Effort_d__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>myVariable_current.Actual_Effort_d__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>isChangedDecision43_myRule_41_Planned_Effort_d_c</targetReference>
+            </connector>
+            <label>isChangedRule_42_myRule_41_Actual_Effort_d_c</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>isChangedDecision43_myRule_41_Planned_Effort_d_c</name>
+        <label>isChangedDecision43_myRule_41_Planned_Effort_d_c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>isChangedDecision47_myRule_46_copado_Status_c</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>isChangedRule_43_myRule_41_Planned_Effort_d_c</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_old</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>myVariable_old.Planned_Effort_d__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>myVariable_current.Planned_Effort_d__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>isChangedDecision47_myRule_46_copado_Status_c</targetReference>
+            </connector>
+            <label>isChangedRule_43_myRule_41_Planned_Effort_d_c</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>isChangedDecision47_myRule_46_copado_Status_c</name>
+        <label>isChangedDecision47_myRule_46_copado_Status_c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>isChangedRule_47_myRule_46_copado_Status_c</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>myVariable_old</leftValueReference>
@@ -810,22 +1418,22 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>isChangedDecision8_myRule_7_Environment_Name_c</targetReference>
+                <targetReference>myDecision</targetReference>
             </connector>
-            <label>isChangedRule_5_myRule_4_copado_Status_c</label>
+            <label>isChangedRule_47_myRule_46_copado_Status_c</label>
         </rules>
     </decisions>
     <decisions>
-        <name>isChangedDecision8_myRule_7_Environment_Name_c</name>
-        <label>isChangedDecision8_myRule_7_Environment_Name_c</label>
+        <name>isChangedDecision5_myRule_4_Environment_Name_c</name>
+        <label>isChangedDecision5_myRule_4_Environment_Name_c</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>isChangedDecision11_myRule_10_Environment_Name_c</targetReference>
+            <targetReference>isChangedDecision9_myRule_8_Environment_Name_c</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>isChangedRule_8_myRule_7_Environment_Name_c</name>
+            <name>isChangedRule_5_myRule_4_Environment_Name_c</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>myVariable_old</leftValueReference>
@@ -842,9 +1450,41 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>isChangedDecision11_myRule_10_Environment_Name_c</targetReference>
+                <targetReference>isChangedDecision9_myRule_8_Environment_Name_c</targetReference>
             </connector>
-            <label>isChangedRule_8_myRule_7_Environment_Name_c</label>
+            <label>isChangedRule_5_myRule_4_Environment_Name_c</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>isChangedDecision9_myRule_8_Environment_Name_c</name>
+        <label>isChangedDecision9_myRule_8_Environment_Name_c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>isChangedDecision13_myRule_12_copado_Promote_and_Deploy_c</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>isChangedRule_9_myRule_8_Environment_Name_c</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_old</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>myVariable_old.Environment_Name__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>myVariable_current.Environment_Name__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>isChangedDecision13_myRule_12_copado_Promote_and_Deploy_c</targetReference>
+            </connector>
+            <label>isChangedRule_9_myRule_8_Environment_Name_c</label>
         </rules>
     </decisions>
     <decisions>
@@ -937,19 +1577,19 @@
         <processMetadataValues>
             <name>index</name>
             <value>
-                <numberValue>4.0</numberValue>
+                <numberValue>3.0</numberValue>
             </value>
         </processMetadataValues>
-        <name>myDecision13</name>
-        <label>myDecision13</label>
+        <name>myDecision11</name>
+        <label>myDecision11</label>
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision16</targetReference>
+            <targetReference>myDecision14</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>myRule_14</name>
+            <name>myRule_12</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <processMetadataValues>
@@ -976,7 +1616,7 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>isChangedRule_15_myRule_14_copado_Promote_and_Deploy_c</leftValueReference>
+                <leftValueReference>isChangedRule_13_myRule_12_copado_Promote_and_Deploy_c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -1014,7 +1654,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_14_A1</targetReference>
+                <targetReference>myRule_12_A1</targetReference>
             </connector>
             <label>Mulesoft Deployment</label>
         </rules>
@@ -1023,19 +1663,19 @@
         <processMetadataValues>
             <name>index</name>
             <value>
-                <numberValue>5.0</numberValue>
+                <numberValue>4.0</numberValue>
             </value>
         </processMetadataValues>
-        <name>myDecision16</name>
-        <label>myDecision16</label>
+        <name>myDecision14</name>
+        <label>myDecision14</label>
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision20</targetReference>
+            <targetReference>myDecision18</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>myRule_17</name>
+            <name>myRule_15</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <processMetadataValues>
@@ -1062,7 +1702,7 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>isChangedRule_18_myRule_17_Environment_Name_c</leftValueReference>
+                <leftValueReference>isChangedRule_16_myRule_15_Environment_Name_c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -1100,9 +1740,40 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_17_A1</targetReference>
+                <targetReference>myRule_15_A1</targetReference>
             </connector>
             <label>Deployment to INT</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>5.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision18</name>
+        <label>myDecision18</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision20</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_19</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_19</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_19_A1</targetReference>
+            </connector>
+            <label>Sprint assigned/changed</label>
         </rules>
     </decisions>
     <decisions>
@@ -1133,7 +1804,7 @@
             <connector>
                 <targetReference>myRule_21_A1</targetReference>
             </connector>
-            <label>Sprint assigned/changed</label>
+            <label>Environment Changes</label>
         </rules>
     </decisions>
     <decisions>
@@ -1148,42 +1819,11 @@
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision24</targetReference>
+            <targetReference>myDecision25</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>myRule_23</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>formula_myRule_23</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myRule_23_A1</targetReference>
-            </connector>
-            <label>Environment Changes</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <processMetadataValues>
-            <name>index</name>
-            <value>
-                <numberValue>8.0</numberValue>
-            </value>
-        </processMetadataValues>
-        <name>myDecision24</name>
-        <label>myDecision24</label>
-        <locationX>50</locationX>
-        <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>myDecision27</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>default</defaultConnectorLabel>
-        <rules>
-            <name>myRule_25</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <processMetadataValues>
@@ -1210,7 +1850,7 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>isChangedRule_26_myRule_25_copado_Status_c</leftValueReference>
+                <leftValueReference>isChangedRule_24_myRule_23_copado_Status_c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -1248,9 +1888,40 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_25_A1</targetReference>
+                <targetReference>myRule_23_A1</targetReference>
             </connector>
             <label>Changes Ready for UAT</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>8.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision25</name>
+        <label>myDecision25</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision27</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_26</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_26</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_26_A1</targetReference>
+            </connector>
+            <label>Act - Customer Journey Calculation</label>
         </rules>
     </decisions>
     <decisions>
@@ -1265,42 +1936,11 @@
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision29</targetReference>
+            <targetReference>myDecision31</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>myRule_28</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>formula_myRule_28</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myRule_28_A1</targetReference>
-            </connector>
-            <label>Act - Customer Journey Calculation</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <processMetadataValues>
-            <name>index</name>
-            <value>
-                <numberValue>10.0</numberValue>
-            </value>
-        </processMetadataValues>
-        <name>myDecision29</name>
-        <label>myDecision29</label>
-        <locationX>50</locationX>
-        <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>myDecision33</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>default</defaultConnectorLabel>
-        <rules>
-            <name>myRule_30</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <processMetadataValues>
@@ -1333,14 +1973,45 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>isChangedRule_31_myRule_30_Customer_Journey_c</leftValueReference>
+                <leftValueReference>isChangedRule_29_myRule_28_Customer_Journey_c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>User_Story</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
-                <targetReference>myRule_30_A1</targetReference>
+                <targetReference>myRule_28_A1</targetReference>
             </connector>
             <label>Old - Customer Journey Calculation</label>
         </rules>
@@ -1357,12 +2028,43 @@
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision6</targetReference>
+            <targetReference>myDecision7</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>myRule_4</name>
-            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Environment_Name__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>DEV</stringValue>
+                </rightValue>
+            </conditions>
             <conditions>
                 <processMetadataValues>
                     <name>inputDataType</name>
@@ -1373,7 +2075,7 @@
                 <processMetadataValues>
                     <name>leftHandSideType</name>
                     <value>
-                        <stringValue>Picklist</stringValue>
+                        <stringValue>String</stringValue>
                     </value>
                 </processMetadataValues>
                 <processMetadataValues>
@@ -1388,78 +2090,47 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>isChangedRule_5_myRule_4_copado_Status_c</leftValueReference>
+                <leftValueReference>isChangedRule_5_myRule_4_Environment_Name_c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_current.copado__Status__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>In Progress</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_current.copado__Status__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Deployment</stringValue>
-                </rightValue>
-            </conditions>
             <connector>
                 <targetReference>myRule_4_A1</targetReference>
             </connector>
-            <label>Customer Journey Status to Implementation</label>
+            <label>Start Deployment</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>10.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision31</name>
+        <label>myDecision31</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision33</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_32</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_32</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_32_A1</targetReference>
+            </connector>
+            <label>Act - Sprint Calculation</label>
         </rules>
     </decisions>
     <decisions>
@@ -1474,39 +2145,11 @@
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision35</targetReference>
+            <targetReference>myDecision37</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>myRule_34</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>formula_myRule_34</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myRule_34_A1</targetReference>
-            </connector>
-            <label>Act - Sprint Calculation</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <processMetadataValues>
-            <name>index</name>
-            <value>
-                <numberValue>12.0</numberValue>
-            </value>
-        </processMetadataValues>
-        <name>myDecision35</name>
-        <label>myDecision35</label>
-        <locationX>50</locationX>
-        <locationY>0</locationY>
-        <defaultConnectorLabel>default</defaultConnectorLabel>
-        <rules>
-            <name>myRule_36</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <processMetadataValues>
@@ -1539,16 +2182,247 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>isChangedRule_37_myRule_36_copado_Sprint_c</leftValueReference>
+                <leftValueReference>isChangedRule_35_myRule_34_copado_Sprint_c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>User_Story</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_34_A1</targetReference>
+            </connector>
+            <label>Old - Sprint Calculation</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>12.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision37</name>
+        <label>myDecision37</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision40</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_38</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_38</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_36_A1</targetReference>
+                <targetReference>myRule_38_A1</targetReference>
             </connector>
-            <label>Old - Sprint Calculation</label>
+            <label>Create History Entry</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>13.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision40</name>
+        <label>myDecision40</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision45</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_41</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Number</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>Number</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>isChangedRule_42_myRule_41_Actual_Effort_d_c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Number</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>Number</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>isChangedRule_43_myRule_41_Planned_Effort_d_c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_41_A1</targetReference>
+            </connector>
+            <label>Efforts changed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>14.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision45</name>
+        <label>myDecision45</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_46</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>isChangedRule_47_myRule_46_copado_Status_c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.copado__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Designed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_46_A1</targetReference>
+            </connector>
+            <label>Prototype Created</label>
         </rules>
     </decisions>
     <decisions>
@@ -1558,164 +2432,16 @@
                 <numberValue>2.0</numberValue>
             </value>
         </processMetadataValues>
-        <name>myDecision6</name>
-        <label>myDecision6</label>
+        <name>myDecision7</name>
+        <label>myDecision7</label>
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision9</targetReference>
+            <targetReference>myDecision11</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>myRule_7</name>
-            <conditionLogic>(1 OR 2 OR 3) AND 4</conditionLogic>
-            <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_current.Environment_Name__c</leftValueReference>
-                <operator>Contains</operator>
-                <rightValue>
-                    <stringValue>DEV</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_current.Environment_Name__c</leftValueReference>
-                <operator>Contains</operator>
-                <rightValue>
-                    <stringValue>INT</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_current.Environment_Name__c</leftValueReference>
-                <operator>Contains</operator>
-                <rightValue>
-                    <stringValue>QA</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>Boolean</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>Boolean</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>isChangedRule_8_myRule_7_Environment_Name_c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myRule_7_A1</targetReference>
-            </connector>
-            <label>Start Deployment</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <processMetadataValues>
-            <name>index</name>
-            <value>
-                <numberValue>3.0</numberValue>
-            </value>
-        </processMetadataValues>
-        <name>myDecision9</name>
-        <label>myDecision9</label>
-        <locationX>50</locationX>
-        <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>myDecision13</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>default</defaultConnectorLabel>
-        <rules>
-            <name>myRule_10</name>
+            <name>myRule_8</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <processMetadataValues>
@@ -1742,7 +2468,7 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>isChangedRule_11_myRule_10_Environment_Name_c</leftValueReference>
+                <leftValueReference>isChangedRule_9_myRule_8_Environment_Name_c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -1780,7 +2506,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_10_A1</targetReference>
+                <targetReference>myRule_8_A1</targetReference>
             </connector>
             <label>Deployment to DEV</label>
         </rules>
@@ -1792,7 +2518,7 @@
                 <stringValue>$Label.User_Story_Task_Record_Type_Test </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_12_myRule_10_A3_1823731074</name>
+        <name>formula_10_myRule_8_A3_4715318210</name>
         <dataType>String</dataType>
         <expression>{!$Label.User_Story_Task_Record_Type_Test}</expression>
     </formulas>
@@ -1803,7 +2529,7 @@
                 <stringValue>$Label.User_Story_Task_Record_Type_Test </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_19_myRule_17_A2_3160862780</name>
+        <name>formula_17_myRule_15_A2_4138129214</name>
         <dataType>String</dataType>
         <expression>{!$Label.User_Story_Task_Record_Type_Test}</expression>
     </formulas>
@@ -1814,7 +2540,7 @@
                 <stringValue>priorvalue([copado__User_Story__c].Customer_Journey__c )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_32_myRule_30_A1_9404649759</name>
+        <name>formula_30_myRule_28_A1_1227065957</name>
         <dataType>String</dataType>
         <expression>priorvalue({!myVariable_current.Customer_Journey__c} )</expression>
     </formulas>
@@ -1825,9 +2551,43 @@
                 <stringValue>priorvalue([copado__User_Story__c].copado__Sprint__c )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_38_myRule_36_A1_2855309657</name>
+        <name>formula_36_myRule_34_A1_8694210616</name>
         <dataType>String</dataType>
         <expression>priorvalue({!myVariable_current.copado__Sprint__c} )</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>text(priorvalue([copado__User_Story__c].copado__Status__c ))</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_39_myRule_38_A1_5236643587</name>
+        <dataType>String</dataType>
+        <expression>text(priorvalue({!myVariable_current.copado__Status__c} ))</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>([copado__User_Story__c].Actual_Effort_d__c /[copado__User_Story__c].Planned_Effort_d__c )*100</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_44_myRule_41_A1_8323444867</name>
+        <dataType>Number</dataType>
+        <expression>({!myVariable_current.Actual_Effort_d__c} /{!myVariable_current.Planned_Effort_d__c} )*100</expression>
+        <scale>18</scale>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>text(priorvalue([copado__User_Story__c].copado__Status__c ))</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_6_myRule_4_A2_5280751949</name>
+        <dataType>String</dataType>
+        <expression>text(priorvalue({!myVariable_current.copado__Status__c} ))</expression>
     </formulas>
     <formulas>
         <processMetadataValues>
@@ -1843,7 +2603,7 @@ ISBLANK(PRIORVALUE([copado__User_Story__c].copado__Sprint__c  ))
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_myRule_21</name>
+        <name>formula_myRule_19</name>
         <dataType>Boolean</dataType>
         <expression>(
 ISCHANGED({!myVariable_current.copado__Sprint__c} ) 
@@ -1869,7 +2629,7 @@ ISBLANK(PRIORVALUE([copado__User_Story__c].copado__Environment__c ))
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_myRule_23</name>
+        <name>formula_myRule_21</name>
         <dataType>Boolean</dataType>
         <expression>(
 ISCHANGED({!myVariable_current.copado__Environment__c} ) 
@@ -1885,7 +2645,7 @@ ISBLANK(PRIORVALUE({!myVariable_current.copado__Environment__c} ))
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>(
+                <stringValue>((
 ISCHANGED([copado__User_Story__c].Actual_Effort_d__c ) 
 )
 ||
@@ -1919,12 +2679,15 @@ ISBLANK(PRIORVALUE([copado__User_Story__c].Customer_Journey__c ))
 (
 ISBLANK(PRIORVALUE([copado__User_Story__c].copado__Progress__c))
 &amp;&amp; NOT(ISBLANK([copado__User_Story__c].copado__Progress__c))
-)</stringValue>
+)
+||
+isnew())
+&amp;&amp; [copado__User_Story__c].RecordType.DeveloperName = &quot;User_Story&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_myRule_28</name>
+        <name>formula_myRule_26</name>
         <dataType>Boolean</dataType>
-        <expression>(
+        <expression>((
 ISCHANGED({!myVariable_current.Actual_Effort_d__c} ) 
 )
 ||
@@ -1958,13 +2721,16 @@ ISBLANK(PRIORVALUE({!myVariable_current.Customer_Journey__c} ))
 (
 ISBLANK(PRIORVALUE({!myVariable_current.copado__Progress__c}))
 &amp;&amp; NOT(ISBLANK({!myVariable_current.copado__Progress__c}))
-)</expression>
+)
+||
+isnew())
+&amp;&amp; {!myVariable_current.RecordType.DeveloperName} = &quot;User_Story&quot;</expression>
     </formulas>
     <formulas>
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>(
+                <stringValue>((
 ISCHANGED([copado__User_Story__c].Actual_Effort_d__c ) 
 )
 ||
@@ -1998,12 +2764,15 @@ ISBLANK(PRIORVALUE([copado__User_Story__c].copado__Progress__c ))
 (
 ISBLANK(PRIORVALUE([copado__User_Story__c].copado__Sprint__c))
 &amp;&amp; NOT(ISBLANK([copado__User_Story__c].copado__Sprint__c))
-)</stringValue>
+)
+||
+isnew())
+&amp;&amp; [copado__User_Story__c].RecordType.DeveloperName = &quot;User_Story&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_myRule_34</name>
+        <name>formula_myRule_32</name>
         <dataType>Boolean</dataType>
-        <expression>(
+        <expression>((
 ISCHANGED({!myVariable_current.Actual_Effort_d__c} ) 
 )
 ||
@@ -2037,9 +2806,29 @@ ISBLANK(PRIORVALUE({!myVariable_current.copado__Progress__c} ))
 (
 ISBLANK(PRIORVALUE({!myVariable_current.copado__Sprint__c}))
 &amp;&amp; NOT(ISBLANK({!myVariable_current.copado__Sprint__c}))
-)</expression>
+)
+||
+isnew())
+&amp;&amp; {!myVariable_current.RecordType.DeveloperName} = &quot;User_Story&quot;</expression>
     </formulas>
-    <interviewLabel>User_Story_Create_Update-3_InterviewLabel</interviewLabel>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>(isnew() &amp;&amp; NOT(ISBLANK(text([copado__User_Story__c].copado__Status__c ))))
+||
+(ischanged([copado__User_Story__c].copado__Status__c ))
+
+</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_38</name>
+        <dataType>Boolean</dataType>
+        <expression>(isnew() &amp;&amp; NOT(ISBLANK(text({!myVariable_current.copado__Status__c} ))))
+||
+(ischanged({!myVariable_current.copado__Status__c} ))</expression>
+    </formulas>
+    <interviewLabel>User_Story_Create_Update-16_InterviewLabel</interviewLabel>
     <label>User Story - Create &amp; Update</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -2067,196 +2856,12 @@ ISBLANK(PRIORVALUE({!myVariable_current.copado__Sprint__c}))
     </processMetadataValues>
     <processType>Workflow</processType>
     <recordCreates>
-        <name>myRule_10_A3</name>
-        <label>Create User Story Task to Test Implementation</label>
-        <locationX>1000</locationX>
-        <locationY>400</locationY>
-        <connector>
-            <targetReference>myDecision13</targetReference>
-        </connector>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>ID</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Record Type ID</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideReferenceTo</name>
-                <value>
-                    <stringValue>RecordType</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Formula</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>RecordTypeId</field>
-            <value>
-                <elementReference>formula_12_myRule_10_A3_1823731074</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>ID</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Ressource</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideReferenceTo</name>
-                <value>
-                    <stringValue>Ressource__c</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Reference</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>Ressource__c</field>
-            <value>
-                <elementReference>myVariable_current.copado__Developer__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>Picklist</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Status</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideReferenceTo</name>
-                <value>
-                    <stringValue></stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Picklist</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>Status__c</field>
-            <value>
-                <stringValue>Not Started</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Task Description</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideReferenceTo</name>
-                <value>
-                    <stringValue></stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>Task_Description__c</field>
-            <value>
-                <stringValue>Create test case and document results for DEV deployment</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>ID</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>true</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>User Story</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Reference</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>copado__User_Story__c</field>
-            <value>
-                <elementReference>myVariable_current.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <object>copado__User_Story_Task__c</object>
-    </recordCreates>
-    <recordCreates>
-        <name>myRule_17_A2</name>
+        <name>myRule_15_A2</name>
         <label>Create User Story Task</label>
-        <locationX>1700</locationX>
+        <locationX>1500</locationX>
         <locationY>300</locationY>
         <connector>
-            <targetReference>myDecision20</targetReference>
+            <targetReference>myRule_15_A3</targetReference>
         </connector>
         <inputAssignments>
             <processMetadataValues>
@@ -2291,7 +2896,7 @@ ISBLANK(PRIORVALUE({!myVariable_current.copado__Sprint__c}))
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <elementReference>formula_19_myRule_17_A2_3160862780</elementReference>
+                <elementReference>formula_17_myRule_15_A2_4138129214</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2434,51 +3039,14 @@ ISBLANK(PRIORVALUE({!myVariable_current.copado__Sprint__c}))
         </inputAssignments>
         <object>copado__User_Story_Task__c</object>
     </recordCreates>
-    <recordUpdates>
-        <processMetadataValues>
-            <name>evaluationType</name>
-            <value>
-                <stringValue>always</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>extraTypeInfo</name>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>isChildRelationship</name>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>reference</name>
-            <value>
-                <stringValue>[copado__User_Story__c]</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>referenceTargetField</name>
-        </processMetadataValues>
-        <name>myRule_10_A2</name>
-        <label>Update Owner</label>
-        <locationX>1000</locationX>
-        <locationY>300</locationY>
+    <recordCreates>
+        <name>myRule_8_A3</name>
+        <label>Create User Story Task to Test Implementation</label>
+        <locationX>800</locationX>
+        <locationY>400</locationY>
         <connector>
-            <targetReference>myRule_10_A3</targetReference>
+            <targetReference>myDecision11</targetReference>
         </connector>
-        <filters>
-            <processMetadataValues>
-                <name>implicit</name>
-                <value>
-                    <booleanValue>true</booleanValue>
-                </value>
-            </processMetadataValues>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>myVariable_current.Id</elementReference>
-            </value>
-        </filters>
         <inputAssignments>
             <processMetadataValues>
                 <name>dataType</name>
@@ -2495,13 +3063,115 @@ ISBLANK(PRIORVALUE({!myVariable_current.copado__Sprint__c}))
             <processMetadataValues>
                 <name>leftHandSideLabel</name>
                 <value>
-                    <stringValue>Owner ID</stringValue>
+                    <stringValue>Record Type ID</stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue>Group;User</stringValue>
+                    <stringValue>RecordType</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>formula_10_myRule_8_A3_4715318210</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Status</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Not Started</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Task Description</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Task_Description__c</field>
+            <value>
+                <stringValue>Create test case and document results for DEV deployment</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>User Story</stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -2510,13 +3180,13 @@ ISBLANK(PRIORVALUE({!myVariable_current.copado__Sprint__c}))
                     <stringValue>Reference</stringValue>
                 </value>
             </processMetadataValues>
-            <field>OwnerId</field>
+            <field>copado__User_Story__c</field>
             <value>
-                <elementReference>myVariable_current.copado__Developer__c</elementReference>
+                <elementReference>myVariable_current.Id</elementReference>
             </value>
         </inputAssignments>
-        <object>copado__User_Story__c</object>
-    </recordUpdates>
+        <object>copado__User_Story_Task__c</object>
+    </recordCreates>
     <recordUpdates>
         <processMetadataValues>
             <name>evaluationType</name>
@@ -2542,12 +3212,12 @@ ISBLANK(PRIORVALUE({!myVariable_current.copado__Sprint__c}))
         <processMetadataValues>
             <name>referenceTargetField</name>
         </processMetadataValues>
-        <name>myRule_17_A1</name>
+        <name>myRule_15_A1</name>
         <label>Update Owner/Status</label>
-        <locationX>1700</locationX>
+        <locationX>1500</locationX>
         <locationY>200</locationY>
         <connector>
-            <targetReference>myRule_17_A2</targetReference>
+            <targetReference>myRule_15_A2</targetReference>
         </connector>
         <filters>
             <processMetadataValues>
@@ -2667,101 +3337,12 @@ ISBLANK(PRIORVALUE({!myVariable_current.copado__Sprint__c}))
         <processMetadataValues>
             <name>referenceTargetField</name>
         </processMetadataValues>
-        <name>myRule_1_A1</name>
-        <label>Update Owner</label>
-        <locationX>100</locationX>
-        <locationY>200</locationY>
-        <connector>
-            <targetReference>myDecision3</targetReference>
-        </connector>
-        <filters>
-            <processMetadataValues>
-                <name>implicit</name>
-                <value>
-                    <booleanValue>true</booleanValue>
-                </value>
-            </processMetadataValues>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>myVariable_current.Id</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>ID</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Owner ID</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideReferenceTo</name>
-                <value>
-                    <stringValue>Group;User</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideLabel</name>
-                <value>
-                    <stringValue>Developers</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Queue</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>OwnerId</field>
-            <value>
-                <stringValue>00G09000000tgBFEAY</stringValue>
-            </value>
-        </inputAssignments>
-        <object>copado__User_Story__c</object>
-    </recordUpdates>
-    <recordUpdates>
-        <processMetadataValues>
-            <name>evaluationType</name>
-            <value>
-                <stringValue>always</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>extraTypeInfo</name>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>isChildRelationship</name>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>reference</name>
-            <value>
-                <stringValue>[copado__User_Story__c]</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>referenceTargetField</name>
-        </processMetadataValues>
-        <name>myRule_21_A1</name>
+        <name>myRule_19_A1</name>
         <label>Assign Release</label>
-        <locationX>2100</locationX>
+        <locationX>1900</locationX>
         <locationY>200</locationY>
         <connector>
-            <targetReference>myDecision22</targetReference>
+            <targetReference>myDecision20</targetReference>
         </connector>
         <filters>
             <processMetadataValues>
@@ -2839,12 +3420,184 @@ ISBLANK(PRIORVALUE({!myVariable_current.copado__Sprint__c}))
         <processMetadataValues>
             <name>referenceTargetField</name>
         </processMetadataValues>
-        <name>myRule_25_A2</name>
-        <label>Update Owner in User Story</label>
-        <locationX>2500</locationX>
+        <name>myRule_1_A1</name>
+        <label>Update Owner</label>
+        <locationX>100</locationX>
+        <locationY>200</locationY>
+        <connector>
+            <targetReference>myRule_1_A2</targetReference>
+        </connector>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Owner ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>Group;User</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideLabel</name>
+                <value>
+                    <stringValue>Developers</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Queue</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G09000000tgBFEAY</stringValue>
+            </value>
+        </inputAssignments>
+        <object>copado__User_Story__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[copado__User_Story__c].Customer Journey</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
+        <name>myRule_1_A2</name>
+        <label>Update Customer Journey Status</label>
+        <locationX>100</locationX>
         <locationY>300</locationY>
         <connector>
-            <targetReference>myRule_25_A3</targetReference>
+            <targetReference>myDecision3</targetReference>
+        </connector>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Customer_Journey__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Status</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Implementation</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Customer_Journey__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[copado__User_Story__c]</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
+        <name>myRule_23_A2</name>
+        <label>Update Owner in User Story</label>
+        <locationX>2300</locationX>
+        <locationY>300</locationY>
+        <connector>
+            <targetReference>myRule_23_A3</targetReference>
         </connector>
         <filters>
             <processMetadataValues>
@@ -2928,12 +3681,12 @@ ISBLANK(PRIORVALUE({!myVariable_current.copado__Sprint__c}))
         <processMetadataValues>
             <name>referenceTargetField</name>
         </processMetadataValues>
-        <name>myRule_25_A3</name>
+        <name>myRule_23_A3</name>
         <label>Update Owner in Customer Journey</label>
-        <locationX>2500</locationX>
+        <locationX>2300</locationX>
         <locationY>400</locationY>
         <connector>
-            <targetReference>myDecision27</targetReference>
+            <targetReference>myDecision25</targetReference>
         </connector>
         <filters>
             <processMetadataValues>
@@ -3011,19 +3764,99 @@ ISBLANK(PRIORVALUE({!myVariable_current.copado__Sprint__c}))
         <processMetadataValues>
             <name>reference</name>
             <value>
+                <stringValue>[copado__User_Story__c]</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
+        <name>myRule_41_A1</name>
+        <label>Change Progress</label>
+        <locationX>4100</locationX>
+        <locationY>200</locationY>
+        <connector>
+            <targetReference>myDecision45</targetReference>
+        </connector>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Number</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Progress</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>copado__Progress__c</field>
+            <value>
+                <elementReference>formula_44_myRule_41_A1_8323444867</elementReference>
+            </value>
+        </inputAssignments>
+        <object>copado__User_Story__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
                 <stringValue>[copado__User_Story__c].Customer Journey</stringValue>
             </value>
         </processMetadataValues>
         <processMetadataValues>
             <name>referenceTargetField</name>
         </processMetadataValues>
-        <name>myRule_4_A1</name>
-        <label>Change Status</label>
-        <locationX>400</locationX>
+        <name>myRule_46_A1</name>
+        <label>Update Customer Journey</label>
+        <locationX>4600</locationX>
         <locationY>200</locationY>
-        <connector>
-            <targetReference>myDecision6</targetReference>
-        </connector>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -3041,7 +3874,7 @@ ISBLANK(PRIORVALUE({!myVariable_current.copado__Sprint__c}))
             <processMetadataValues>
                 <name>dataType</name>
                 <value>
-                    <stringValue>Picklist</stringValue>
+                    <stringValue>Boolean</stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -3053,7 +3886,7 @@ ISBLANK(PRIORVALUE({!myVariable_current.copado__Sprint__c}))
             <processMetadataValues>
                 <name>leftHandSideLabel</name>
                 <value>
-                    <stringValue>Status</stringValue>
+                    <stringValue>Prototype Created</stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -3065,12 +3898,12 @@ ISBLANK(PRIORVALUE({!myVariable_current.copado__Sprint__c}))
             <processMetadataValues>
                 <name>rightHandSideType</name>
                 <value>
-                    <stringValue>Picklist</stringValue>
+                    <stringValue>Boolean</stringValue>
                 </value>
             </processMetadataValues>
-            <field>Status__c</field>
+            <field>Prototype_Created__c</field>
             <value>
-                <stringValue>Implementation</stringValue>
+                <booleanValue>true</booleanValue>
             </value>
         </inputAssignments>
         <object>Customer_Journey__c</object>
@@ -3100,12 +3933,12 @@ ISBLANK(PRIORVALUE({!myVariable_current.copado__Sprint__c}))
         <processMetadataValues>
             <name>referenceTargetField</name>
         </processMetadataValues>
-        <name>myRule_7_A1</name>
+        <name>myRule_4_A1</name>
         <label>Change Status</label>
-        <locationX>700</locationX>
+        <locationX>400</locationX>
         <locationY>200</locationY>
         <connector>
-            <targetReference>myDecision9</targetReference>
+            <targetReference>myRule_4_A2</targetReference>
         </connector>
         <filters>
             <processMetadataValues>
@@ -3154,6 +3987,89 @@ ISBLANK(PRIORVALUE({!myVariable_current.copado__Sprint__c}))
             <field>copado__Status__c</field>
             <value>
                 <stringValue>Deployment</stringValue>
+            </value>
+        </inputAssignments>
+        <object>copado__User_Story__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[copado__User_Story__c]</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
+        <name>myRule_8_A2</name>
+        <label>Update Owner</label>
+        <locationX>800</locationX>
+        <locationY>300</locationY>
+        <connector>
+            <targetReference>myRule_8_A3</targetReference>
+        </connector>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Owner ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>Group;User</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>myVariable_current.copado__Developer__c</elementReference>
             </value>
         </inputAssignments>
         <object>copado__User_Story__c</object>

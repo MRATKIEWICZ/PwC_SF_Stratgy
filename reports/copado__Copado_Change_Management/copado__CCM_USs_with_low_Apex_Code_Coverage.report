@@ -53,7 +53,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>In progress</value>
+            <value>In Progress</value>
         </criteriaItems>
         <criteriaItems>
             <column>copado__User_Story__c.copado__Has_Apex_Code__c</column>

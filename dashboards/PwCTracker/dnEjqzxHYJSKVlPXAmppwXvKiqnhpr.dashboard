@@ -7,6 +7,37 @@
     <colorPalette>unity</colorPalette>
     <dashboardChartTheme>light</dashboardChartTheme>
     <dashboardColorPalette>unity</dashboardColorPalette>
+    <dashboardFilters>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Integration</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Custom Development</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Project Management</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Technical Architecture</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Solution Architecture</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Consulting</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Business Analysis</values>
+        </dashboardFilterOptions>
+        <name>Team</name>
+    </dashboardFilters>
     <dashboardGridLayout>
         <dashboardGridComponents>
             <colSpan>4</colSpan>
@@ -20,6 +51,9 @@
                     <column>Time_Sheet__c.Effort_d__c</column>
                 </chartSummary>
                 <componentType>Donut</componentType>
+                <dashboardFilterColumns>
+                    <column>Time_Sheet__c.Team__c</column>
+                </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
@@ -58,6 +92,9 @@
                     <column>Time_Sheet__c.Effort_d__c</column>
                 </chartSummary>
                 <componentType>Bar</componentType>
+                <dashboardFilterColumns>
+                    <column>Time_Sheet__c.Team__c</column>
+                </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
@@ -89,46 +126,49 @@
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <componentType>FlexTable</componentType>
+                <dashboardFilterColumns>
+                    <column>Time_Sheet__c$Team__c</column>
+                </dashboardFilterColumns>
                 <flexComponentProperties>
                     <decimalPrecision>-1</decimalPrecision>
                     <flexTableColumn>
                         <reportColumn>Time_Sheet__c.Name</reportColumn>
                         <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
+                        <showTotal>true</showTotal>
                         <type>detail</type>
                     </flexTableColumn>
                     <flexTableColumn>
                         <reportColumn>Customer_Journey_Task__c.Project_Type_Ressource_Team_Location__c</reportColumn>
                         <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
+                        <showTotal>true</showTotal>
                         <type>detail</type>
                     </flexTableColumn>
                     <flexTableColumn>
                         <reportColumn>Customer_Journey_Task__c.Customer_Journey__c.Name</reportColumn>
                         <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
+                        <showTotal>true</showTotal>
                         <type>detail</type>
                     </flexTableColumn>
                     <flexTableColumn>
                         <reportColumn>Customer_Journey_Task__c.Name</reportColumn>
                         <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
+                        <showTotal>true</showTotal>
                         <type>detail</type>
                     </flexTableColumn>
                     <flexTableColumn>
                         <reportColumn>Customer_Journey_Task__c.Task_Description__c</reportColumn>
                         <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
+                        <showTotal>true</showTotal>
                         <type>detail</type>
                     </flexTableColumn>
                     <flexTableColumn>
                         <reportColumn>Customer_Journey_Task__c.Effort_d__c</reportColumn>
                         <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
+                        <showTotal>true</showTotal>
                         <type>detail</type>
                     </flexTableColumn>
                     <flexTableSortInfo>
-                        <sortColumn>Customer_Journey_Task__c.Customer_Journey__c.Name</sortColumn>
+                        <sortColumn>Time_Sheet__c.Name</sortColumn>
                         <sortOrder>1</sortOrder>
                     </flexTableSortInfo>
                     <hideChatterPhotos>true</hideChatterPhotos>
@@ -146,42 +186,45 @@
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <componentType>FlexTable</componentType>
+                <dashboardFilterColumns>
+                    <column>Time_Sheet__c$Team__c</column>
+                </dashboardFilterColumns>
                 <flexComponentProperties>
                     <decimalPrecision>-1</decimalPrecision>
                     <flexTableColumn>
                         <reportColumn>Time_Sheet__c.Name</reportColumn>
                         <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
+                        <showTotal>true</showTotal>
                         <type>detail</type>
                     </flexTableColumn>
                     <flexTableColumn>
                         <reportColumn>copado__User_Story_Task__c.Project_Sprint_Ressource_Team_Location__c</reportColumn>
                         <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
+                        <showTotal>true</showTotal>
                         <type>detail</type>
                     </flexTableColumn>
                     <flexTableColumn>
                         <reportColumn>copado__User_Story_Task__c.User_Story_Title__c</reportColumn>
                         <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
+                        <showTotal>true</showTotal>
                         <type>detail</type>
                     </flexTableColumn>
                     <flexTableColumn>
                         <reportColumn>copado__User_Story_Task__c.Name</reportColumn>
                         <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
+                        <showTotal>true</showTotal>
                         <type>detail</type>
                     </flexTableColumn>
                     <flexTableColumn>
                         <reportColumn>copado__User_Story_Task__c.Task_Description__c</reportColumn>
                         <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
+                        <showTotal>true</showTotal>
                         <type>detail</type>
                     </flexTableColumn>
                     <flexTableColumn>
                         <reportColumn>copado__User_Story_Task__c.Effort_d__c</reportColumn>
                         <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
+                        <showTotal>true</showTotal>
                         <type>detail</type>
                     </flexTableColumn>
                     <flexTableSortInfo>
@@ -195,6 +238,60 @@
                 <report>PwCTracker/Time_Sheets_with_User_Story_Tasks_GSq</report>
             </dashboardComponent>
             <rowIndex>16</rowIndex>
+            <rowSpan>8</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>12</colSpan>
+            <columnIndex>0</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <componentType>FlexTable</componentType>
+                <dashboardFilterColumns>
+                    <column>Time_Sheet__c$Team__c</column>
+                </dashboardFilterColumns>
+                <flexComponentProperties>
+                    <decimalPrecision>-1</decimalPrecision>
+                    <flexTableColumn>
+                        <reportColumn>Time_Sheet__c.Name</reportColumn>
+                        <showSubTotal>false</showSubTotal>
+                        <showTotal>true</showTotal>
+                        <type>detail</type>
+                    </flexTableColumn>
+                    <flexTableColumn>
+                        <reportColumn>Architecture_Task__c.Architecture__c.Name</reportColumn>
+                        <showSubTotal>false</showSubTotal>
+                        <showTotal>true</showTotal>
+                        <type>detail</type>
+                    </flexTableColumn>
+                    <flexTableColumn>
+                        <reportColumn>Architecture_Task__c.Name</reportColumn>
+                        <showSubTotal>false</showSubTotal>
+                        <showTotal>true</showTotal>
+                        <type>detail</type>
+                    </flexTableColumn>
+                    <flexTableColumn>
+                        <reportColumn>Architecture_Task__c.Task_Description__c</reportColumn>
+                        <showSubTotal>false</showSubTotal>
+                        <showTotal>true</showTotal>
+                        <type>detail</type>
+                    </flexTableColumn>
+                    <flexTableColumn>
+                        <reportColumn>Architecture_Task__c.Effort_d__c</reportColumn>
+                        <showSubTotal>false</showSubTotal>
+                        <showTotal>true</showTotal>
+                        <type>detail</type>
+                    </flexTableColumn>
+                    <flexTableSortInfo>
+                        <sortColumn>Time_Sheet__c.Name</sortColumn>
+                        <sortOrder>1</sortOrder>
+                    </flexTableSortInfo>
+                    <hideChatterPhotos>true</hideChatterPhotos>
+                </flexComponentProperties>
+                <groupingSortProperties/>
+                <header>Time Sheet Details - Architecture</header>
+                <report>PwCTracker/Time_Sheets_with_Architecture_Tasks_d9c</report>
+            </dashboardComponent>
+            <rowIndex>24</rowIndex>
             <rowSpan>8</rowSpan>
         </dashboardGridComponents>
         <numberOfColumns>12</numberOfColumns>

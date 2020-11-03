@@ -59,6 +59,10 @@
         <name>Cloud__c</name>
     </fields>
     <fields>
+        <label><!-- Complexity --></label>
+        <name>Complexity__c</name>
+    </fields>
+    <fields>
         <label><!-- Customer Journey Approved By --></label>
         <name>Customer_Journey_Approved_By__c</name>
         <relationshipLabel><!-- Customer Journeys (Customer Journey Approved By) --></relationshipLabel>
@@ -72,12 +76,48 @@
         <name>Deployed_to_Production__c</name>
     </fields>
     <fields>
-        <label><!-- Implementation Progress --></label>
-        <name>Implementation_Progress__c</name>
+        <label><!-- Design Completed --></label>
+        <name>Design_Completed__c</name>
     </fields>
     <fields>
-        <label><!-- Implementation Size --></label>
-        <name>Implementation_Size__c</name>
+        <label><!-- Detailed Estimation (d) --></label>
+        <name>Detailed_Estimation_d__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimation - Analytics (d) --></label>
+        <name>Estimation_Analytics__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimation - Data (d) --></label>
+        <name>Estimation_Data_d__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimation - Highest (d) --></label>
+        <name>Estimation_Highest_d__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimation - Integration (d) --></label>
+        <name>Estimation_Integration_d__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimation - Logic (d) --></label>
+        <name>Estimation_Logic_d__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimation - Other (d) --></label>
+        <name>Estimation_Other_d__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimation - UI (d) --></label>
+        <name>Estimation_UI_d__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expert Estimation (d) --></label>
+        <name>Expert_Estimation_d__c</name>
+    </fields>
+    <fields>
+        <label><!-- Implementation Progress --></label>
+        <name>Implementation_Progress__c</name>
     </fields>
     <fields>
         <label><!-- Journey End --></label>
@@ -100,6 +140,19 @@
         <label><!-- Project --></label>
         <name>Project__c</name>
         <relationshipLabel><!-- Customer Journeys --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Prototype Approved By --></label>
+        <name>Prototype_Approved_By__c</name>
+        <relationshipLabel><!-- Customer Journeys (Prototype Approved By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Prototype Created --></label>
+        <name>Prototype_Created__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requirements Summary --></label>
+        <name>Requirements_Summary__c</name>
     </fields>
     <fields>
         <label><!-- Status --></label>
@@ -129,6 +182,10 @@
             <translation><!-- In Roadmap Prioritization --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Prototyping</masterLabel>
+            <translation><!-- Prototyping --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>User Acceptance Test</masterLabel>
             <translation><!-- User Acceptance Test --></translation>
         </picklistValues>
@@ -140,6 +197,11 @@
     <fields>
         <label><!-- Strategic Theme --></label>
         <name>Strategic_Theme__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Release --></label>
+        <name>Target_Release__c</name>
+        <relationshipLabel><!-- Customer Journeys --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- UAT Approved by --></label>

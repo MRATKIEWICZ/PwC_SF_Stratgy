@@ -843,9 +843,9 @@ IMAGE(&apos;/resource/1516617568000/&apos;+IF($Setup.copado__Settings__c.copado_
         <columns>CREATEDBY_USER</columns>
         <columns>copado__Last_Git_Backup_Status__c</columns>
         <columns>copado__Last_Apex_Tests_Status__c</columns>
+        <columns>copado__is_Developer_Hub_Org__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
-        <language>en_US</language>
     </listViews>
     <listViews>
         <fullName>copado__copa</fullName>
