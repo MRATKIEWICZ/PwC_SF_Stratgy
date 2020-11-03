@@ -20,13 +20,13 @@
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <groupingSortProperties/>
-                <header>All Open User Stories</header>
+                <header>All Open Customer Journeys</header>
                 <indicatorBreakpoint1>0.0</indicatorBreakpoint1>
                 <indicatorBreakpoint2>1.0E9</indicatorBreakpoint2>
                 <indicatorHighColor>#00716B</indicatorHighColor>
                 <indicatorLowColor>#C23934</indicatorLowColor>
                 <indicatorMiddleColor>#FFB75D</indicatorMiddleColor>
-                <report>PwCTracker/All_Open_User_Stories_v4t</report>
+                <report>PwCTracker/All_Open_Customer_Journeys_yvO</report>
                 <showRange>false</showRange>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
@@ -44,13 +44,13 @@
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <groupingSortProperties/>
-                <header>All Open Customer Journeys</header>
+                <header>All Open User Stories</header>
                 <indicatorBreakpoint1>0.0</indicatorBreakpoint1>
                 <indicatorBreakpoint2>1.0E9</indicatorBreakpoint2>
                 <indicatorHighColor>#00716B</indicatorHighColor>
                 <indicatorLowColor>#C23934</indicatorLowColor>
                 <indicatorMiddleColor>#FFB75D</indicatorMiddleColor>
-                <report>PwCTracker/All_Open_Customer_Journeys_yvO</report>
+                <report>PwCTracker/All_Open_User_Stories_v4t</report>
                 <showRange>false</showRange>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
@@ -105,6 +105,54 @@
             <rowSpan>4</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
+            <colSpan>6</colSpan>
+            <columnIndex>0</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartSummary>
+                    <column>RowCount</column>
+                </chartSummary>
+                <componentType>Metric</componentType>
+                <decimalPrecision>-1</decimalPrecision>
+                <displayUnits>Auto</displayUnits>
+                <groupingSortProperties/>
+                <header>All Open Prototypes</header>
+                <indicatorBreakpoint1>0.0</indicatorBreakpoint1>
+                <indicatorBreakpoint2>1.0E9</indicatorBreakpoint2>
+                <indicatorHighColor>#00716B</indicatorHighColor>
+                <indicatorLowColor>#C23934</indicatorLowColor>
+                <indicatorMiddleColor>#FFB75D</indicatorMiddleColor>
+                <report>PwCTracker/All_Open_Prototypes_dOx</report>
+                <showRange>false</showRange>
+            </dashboardComponent>
+            <rowIndex>8</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>6</colSpan>
+            <columnIndex>6</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartSummary>
+                    <column>FORMULA2</column>
+                </chartSummary>
+                <componentType>Metric</componentType>
+                <decimalPrecision>-1</decimalPrecision>
+                <displayUnits>Auto</displayUnits>
+                <groupingSortProperties/>
+                <header>Quality Gate Approval Time in Minutes</header>
+                <indicatorBreakpoint1>0.0</indicatorBreakpoint1>
+                <indicatorBreakpoint2>1.0E9</indicatorBreakpoint2>
+                <indicatorHighColor>#00716B</indicatorHighColor>
+                <indicatorLowColor>#C23934</indicatorLowColor>
+                <indicatorMiddleColor>#FFB75D</indicatorMiddleColor>
+                <report>PwCTracker/Quality_Gate_by_Approval_Process_7Pb</report>
+                <showRange>false</showRange>
+            </dashboardComponent>
+            <rowIndex>8</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
             <colSpan>12</colSpan>
             <columnIndex>0</columnIndex>
             <dashboardComponent>
@@ -117,7 +165,7 @@
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <groupingSortProperties/>
-                <header>Overall Efforts (d)</header>
+                <header>Overall Efforts in Days</header>
                 <indicatorBreakpoint1>0.0</indicatorBreakpoint1>
                 <indicatorBreakpoint2>1.0E9</indicatorBreakpoint2>
                 <indicatorHighColor>#00716B</indicatorHighColor>
@@ -126,7 +174,7 @@
                 <report>PwCTracker/All_Time_Sheets_RU4</report>
                 <showRange>false</showRange>
             </dashboardComponent>
-            <rowIndex>8</rowIndex>
+            <rowIndex>12</rowIndex>
             <rowSpan>4</rowSpan>
         </dashboardGridComponents>
         <numberOfColumns>12</numberOfColumns>

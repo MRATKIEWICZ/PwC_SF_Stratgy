@@ -182,6 +182,7 @@
     </fields>
     <fields>
         <fullName>Current_Environment__c</fullName>
+        <defaultValue>&quot;SO&quot;</defaultValue>
         <externalId>false</externalId>
         <label>Current Environment</label>
         <length>255</length>
@@ -207,7 +208,7 @@
     <fields>
         <fullName>User_Story_Id__c</fullName>
         <externalId>false</externalId>
-        <formula>User_Story_Task__r.copado__User_Story__r.Id</formula>
+        <formula>CASESAFEID(User_Story_Task__r.copado__User_Story__r.Id)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>User Story Id</label>
         <required>false</required>

@@ -5,6 +5,14 @@
         <name>copado__Copado_User_Story_Metadata_Columns</name>
     </fieldSets>
     <fields>
+        <label><!-- Metadata Type Help --></label>
+        <name>Metadata_Type_Help__c</name>
+    </fields>
+    <fields>
+        <label><!-- Metadata Type --></label>
+        <name>Metadata_Type__c</name>
+    </fields>
+    <fields>
         <help><!-- The date when this component was last committed in the User Story. --></help>
         <label><!-- Last Commit Date --></label>
         <name>copado__Last_Commit_Date__c</name>

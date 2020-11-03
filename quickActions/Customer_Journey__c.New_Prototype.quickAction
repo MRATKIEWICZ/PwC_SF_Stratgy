@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>copado__Acceptance_Criteria__c</field>
+        <formula>Customer_Journey__c.Acceptance_Criteria__c</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>copado__Progress__c</field>
+        <formula>0</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>copado__Project__c</field>
+        <formula>Customer_Journey__c.Project__c</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>copado__User_Story_Title__c</field>
+        <formula>Customer_Journey__c.Project__r.Name+&apos;.&apos;+ text(Customer_Journey__c.Strategic_Theme__c)+&apos;.&apos;+
+&apos;Prototype&apos;</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Customer_Journey_Details__c</field>
+        <formula>Customer_Journey__c.Customer_Journey_Details__c</formula>
+    </fieldOverrides>
+    <label>New Prototype</label>
+    <optionsCreateFeedItem>true</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>copado__User_Story_Title__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>copado__Functional_Specifications__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Planned_Prototype_Effort_d__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>copado__Developer__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <targetObject>copado__User_Story__c</targetObject>
+    <targetParentField>Customer_Journey__c</targetParentField>
+    <targetRecordType>copado__User_Story__c.Prototype</targetRecordType>
+    <type>Create</type>
+</QuickAction>

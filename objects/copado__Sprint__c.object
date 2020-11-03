@@ -363,9 +363,9 @@
                     <label>Planned</label>
                 </value>
                 <value>
-                    <fullName>In progress</fullName>
+                    <fullName>In Progress</fullName>
                     <default>false</default>
-                    <label>In progress</label>
+                    <label>In Progress</label>
                 </value>
                 <value>
                     <fullName>Completed</fullName>
@@ -427,13 +427,10 @@
         <columns>copado__Start_Date__c</columns>
         <columns>copado__End_Date__c</columns>
         <columns>copado__Status__c</columns>
-        <columns>copado__Story_points__c</columns>
-        <columns>copado__Days_in_sprint__c</columns>
-        <columns>copado__Working_days_in_sprint__c</columns>
-        <columns>copado__Full_time_resources_in_sprint__c</columns>
+        <columns>Planned_Effort_d__c</columns>
+        <columns>Actual_Effort_d__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
-        <language>en_US</language>
     </listViews>
     <nameField>
         <label>Sprint Name</label>

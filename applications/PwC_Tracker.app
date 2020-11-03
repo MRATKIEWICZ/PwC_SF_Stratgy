@@ -12,12 +12,49 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>PwC Tracker ++</label>
     <navType>Standard</navType>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>User_Story_Details</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
+        <recordType>copado__User_Story__c.copado__User_Story</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>User_Story_Details</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
+        <recordType>copado__User_Story__c.copado__User_Story</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Prototype_Details</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
+        <recordType>copado__User_Story__c.Prototype</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Prototype_Details</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
+        <recordType>copado__User_Story__c.Prototype</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
     <tabs>standard-home</tabs>
     <tabs>copado__Project__c</tabs>
     <tabs>copado__Sprint__c</tabs>
     <tabs>copado__Release__c</tabs>
     <tabs>Customer_Journey__c</tabs>
     <tabs>copado__User_Story__c</tabs>
+    <tabs>Architecture__c</tabs>
     <tabs>Ressource__c</tabs>
     <tabs>Time_Sheet__c</tabs>
     <uiType>Lightning</uiType>

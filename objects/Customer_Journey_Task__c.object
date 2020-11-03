@@ -245,6 +245,15 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Ressource</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Ressource__c.Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
         <referenceTo>Ressource__c</referenceTo>
         <relationshipLabel>Customer Journey Tasks</relationshipLabel>
         <relationshipName>Customer_Journey_Tasks</relationshipName>
@@ -329,9 +338,14 @@
                     <label>Solution Design</label>
                 </value>
                 <value>
-                    <fullName>Architecture Review</fullName>
+                    <fullName>Architecture Work</fullName>
                     <default>false</default>
-                    <label>Architecture Review</label>
+                    <label>Architecture Work</label>
+                </value>
+                <value>
+                    <fullName>Prototyping</fullName>
+                    <default>false</default>
+                    <label>Prototyping</label>
                 </value>
             </valueSetDefinition>
         </valueSet>

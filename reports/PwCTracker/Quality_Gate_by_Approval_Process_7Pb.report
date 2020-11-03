@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>ProcessInstanceNode.CreatedDate:UNIQUE-ProcessInstanceNode.CompletedDate:UNIQUE</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Approval Duration</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>CDF1:AVG</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA2</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Avarage Approval Duration</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <field>ProcessInstance$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>ProcessInstance$CompletedDate</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>CDF1</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>(ProcessInstance.CompletedDate-ProcessInstance.CreatedDate)*24*60</calculatedFormula>
+        <dataType>Double</dataType>
+        <developerName>CDF1</developerName>
+        <label>Approval Duration in Minutes</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ProcessInstance$ProcessDefinition</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ProcessInstance.Nodes$NodeStatus</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Quality Gate by Approval Process</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Process_Instance_with_Process_Instance_Nodes__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>ProcessInstance$CompletedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

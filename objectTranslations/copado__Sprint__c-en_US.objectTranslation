@@ -66,8 +66,8 @@
             <translation><!-- Draft --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>In progress</masterLabel>
-            <translation><!-- In progress --></translation>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Planned</masterLabel>
