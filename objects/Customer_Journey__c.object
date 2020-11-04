@@ -352,10 +352,10 @@
         <visibleLines>25</visibleLines>
     </fields>
     <fields>
-        <fullName>Deployed_to_Production__c</fullName>
+        <fullName>Deploy_to_Production__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
-        <label>Deployed to Production</label>
+        <label>Deploy to Production</label>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -805,11 +805,5 @@
     <pluralLabel>Customer Journeys</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
-    <validationRules>
-        <fullName>DeployToPRD</fullName>
-        <active>true</active>
-        <errorConditionFormula>NOT(ISPICKVAL(Status__c , &apos;UAT&apos;)) &amp;&amp; NOT(ISPICKVAL(Status__c , &apos;Completed&apos;)) &amp;&amp;  Deployed_to_Production__c  = TRUE</errorConditionFormula>
-        <errorMessage>You can deploy to PRD only after UAT</errorMessage>
-    </validationRules>
     <visibility>Public</visibility>
 </CustomObject>
