@@ -185,7 +185,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Deployed_to_Production__c</field>
+            <field>Deploy_to_Production__c</field>
             <table>copado__Project__c.Customer_Journeys__r</table>
         </columns>
         <columns>
