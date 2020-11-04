@@ -5030,9 +5030,9 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Case.SourceId</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -5761,7 +5761,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Customer_Journey__c.Deployed_to_Production__c</field>
+        <field>Customer_Journey__c.Deploy_to_Production__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

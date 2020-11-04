@@ -554,7 +554,7 @@
             </processMetadataValues>
             <name>varCustomerJourney</name>
             <value>
-                <elementReference>formula_30_myRule_28_A1_1227065957</elementReference>
+                <elementReference>formula_30_myRule_28_A1_8922468548</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -684,7 +684,7 @@
             </processMetadataValues>
             <name>varSprint</name>
             <value>
-                <elementReference>formula_36_myRule_34_A1_8694210616</elementReference>
+                <elementReference>formula_36_myRule_34_A1_2587946476</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -875,7 +875,7 @@
             </processMetadataValues>
             <name>varOldValue</name>
             <value>
-                <elementReference>formula_39_myRule_38_A1_5236643587</elementReference>
+                <elementReference>formula_39_myRule_38_A1_2610949715</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -1066,7 +1066,7 @@
             </processMetadataValues>
             <name>varOldValue</name>
             <value>
-                <elementReference>formula_6_myRule_4_A2_5280751949</elementReference>
+                <elementReference>formula_6_myRule_4_A2_1790375368</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -2096,6 +2096,37 @@
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Environment_Name__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Market-DEV</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>myRule_4_A1</targetReference>
             </connector>
@@ -2505,6 +2536,37 @@
                     <stringValue>DEV</stringValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Environment_Name__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Market-DEV</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>myRule_8_A1</targetReference>
             </connector>
@@ -2518,7 +2580,7 @@
                 <stringValue>$Label.User_Story_Task_Record_Type_Test </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_10_myRule_8_A3_4715318210</name>
+        <name>formula_10_myRule_8_A3_7052795521</name>
         <dataType>String</dataType>
         <expression>{!$Label.User_Story_Task_Record_Type_Test}</expression>
     </formulas>
@@ -2529,7 +2591,7 @@
                 <stringValue>$Label.User_Story_Task_Record_Type_Test </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_17_myRule_15_A2_4138129214</name>
+        <name>formula_17_myRule_15_A2_2019128358</name>
         <dataType>String</dataType>
         <expression>{!$Label.User_Story_Task_Record_Type_Test}</expression>
     </formulas>
@@ -2540,7 +2602,7 @@
                 <stringValue>priorvalue([copado__User_Story__c].Customer_Journey__c )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_30_myRule_28_A1_1227065957</name>
+        <name>formula_30_myRule_28_A1_8922468548</name>
         <dataType>String</dataType>
         <expression>priorvalue({!myVariable_current.Customer_Journey__c} )</expression>
     </formulas>
@@ -2551,7 +2613,7 @@
                 <stringValue>priorvalue([copado__User_Story__c].copado__Sprint__c )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_36_myRule_34_A1_8694210616</name>
+        <name>formula_36_myRule_34_A1_2587946476</name>
         <dataType>String</dataType>
         <expression>priorvalue({!myVariable_current.copado__Sprint__c} )</expression>
     </formulas>
@@ -2562,7 +2624,7 @@
                 <stringValue>text(priorvalue([copado__User_Story__c].copado__Status__c ))</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_39_myRule_38_A1_5236643587</name>
+        <name>formula_39_myRule_38_A1_2610949715</name>
         <dataType>String</dataType>
         <expression>text(priorvalue({!myVariable_current.copado__Status__c} ))</expression>
     </formulas>
@@ -2573,7 +2635,7 @@
                 <stringValue>([copado__User_Story__c].Actual_Effort_d__c /[copado__User_Story__c].Planned_Effort_d__c )*100</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_44_myRule_41_A1_8323444867</name>
+        <name>formula_44_myRule_41_A1_1511759983</name>
         <dataType>Number</dataType>
         <expression>({!myVariable_current.Actual_Effort_d__c} /{!myVariable_current.Planned_Effort_d__c} )*100</expression>
         <scale>18</scale>
@@ -2585,7 +2647,7 @@
                 <stringValue>text(priorvalue([copado__User_Story__c].copado__Status__c ))</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_6_myRule_4_A2_5280751949</name>
+        <name>formula_6_myRule_4_A2_1790375368</name>
         <dataType>String</dataType>
         <expression>text(priorvalue({!myVariable_current.copado__Status__c} ))</expression>
     </formulas>
@@ -2828,7 +2890,7 @@ isnew())
 ||
 (ischanged({!myVariable_current.copado__Status__c} ))</expression>
     </formulas>
-    <interviewLabel>User_Story_Create_Update-16_InterviewLabel</interviewLabel>
+    <interviewLabel>User_Story_Create_Update-19_InterviewLabel</interviewLabel>
     <label>User Story - Create &amp; Update</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -2896,7 +2958,7 @@ isnew())
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <elementReference>formula_17_myRule_15_A2_4138129214</elementReference>
+                <elementReference>formula_17_myRule_15_A2_2019128358</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3080,7 +3142,7 @@ isnew())
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <elementReference>formula_10_myRule_8_A3_4715318210</elementReference>
+                <elementReference>formula_10_myRule_8_A3_7052795521</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3357,6 +3419,42 @@ isnew())
                 <elementReference>myVariable_current.Id</elementReference>
             </value>
         </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Project</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>copado__Project__c</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>copado__Project__c</field>
+            <value>
+                <elementReference>myVariable_current.copado__Sprint__r.copado__Project__c</elementReference>
+            </value>
+        </inputAssignments>
         <inputAssignments>
             <processMetadataValues>
                 <name>dataType</name>
@@ -3823,7 +3921,7 @@ isnew())
             </processMetadataValues>
             <field>copado__Progress__c</field>
             <value>
-                <elementReference>formula_44_myRule_41_A1_8323444867</elementReference>
+                <elementReference>formula_44_myRule_41_A1_1511759983</elementReference>
             </value>
         </inputAssignments>
         <object>copado__User_Story__c</object>
