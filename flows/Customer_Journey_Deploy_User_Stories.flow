@@ -118,10 +118,33 @@
         <queriedFields>copado__Status__c</queriedFields>
     </recordLookups>
     <recordUpdates>
+        <name>Update_Customer_Journey</name>
+        <label>Update Customer Journey</label>
+        <locationX>176</locationX>
+        <locationY>854</locationY>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varCustomerJourney</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Deploy_to_Production__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Customer_Journey__c</object>
+    </recordUpdates>
+    <recordUpdates>
         <name>Update_User_Story_Collection</name>
         <label>Update User Story Collection</label>
         <locationX>176</locationX>
         <locationY>734</locationY>
+        <connector>
+            <targetReference>Update_Customer_Journey</targetReference>
+        </connector>
         <inputReference>varUserStoryUpdateColl</inputReference>
     </recordUpdates>
     <start>

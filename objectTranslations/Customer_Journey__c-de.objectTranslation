@@ -72,8 +72,8 @@
         <name>Customer_Journey_Details__c</name>
     </fields>
     <fields>
-        <label><!-- Deployed to Production --></label>
-        <name>Deployed_to_Production__c</name>
+        <label><!-- Deploy to Production --></label>
+        <name>Deploy_to_Production__c</name>
     </fields>
     <fields>
         <label><!-- Design Completed --></label>
@@ -209,8 +209,4 @@
         <relationshipLabel><!-- Customer Journeys (UAT Approved by) --></relationshipLabel>
     </fields>
     <gender>Neuter</gender>
-    <validationRules>
-        <errorMessage><!-- You can deploy to PRD only after UAT --></errorMessage>
-        <name>DeployToPRD</name>
-    </validationRules>
 </CustomObjectTranslation>
