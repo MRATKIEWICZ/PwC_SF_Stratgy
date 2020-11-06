@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>MeterRead</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>MeterRead</value>
+    </caseValues>
+    <fields>
+        <label><!-- Customer Notification Needed --></label>
+        <name>Customer_Notification_Needed__c</name>
+    </fields>
+    <fields>
+        <label><!-- ERP Callout Needed --></label>
+        <name>ERP_Callout_Needed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Organization Name --></label>
+        <name>Organization_Name__c</name>
+        <picklistValues>
+            <masterLabel>Hanse Werke</masterLabel>
+            <translation><!-- Hanse Werke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Headquarter</masterLabel>
+            <translation><!-- Headquarter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preussen Elektra</masterLabel>
+            <translation><!-- Preussen Elektra --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Suwag</masterLabel>
+            <translation><!-- Suwag --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>enviaM</masterLabel>
+            <translation><!-- enviaM --></translation>
+        </picklistValues>
+    </fields>
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>MeterRead Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>
