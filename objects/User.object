@@ -200,6 +200,45 @@
     <enableFeeds>true</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>EON_Organization__c</fullName>
+        <externalId>false</externalId>
+        <label>Organization</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Headquarter</fullName>
+                    <default>false</default>
+                    <label>Headquarter</label>
+                </value>
+                <value>
+                    <fullName>Hanse Werke</fullName>
+                    <default>false</default>
+                    <label>Hanse Werke</label>
+                </value>
+                <value>
+                    <fullName>Preussen Elektra</fullName>
+                    <default>false</default>
+                    <label>Preussen Elektra</label>
+                </value>
+                <value>
+                    <fullName>enviaM</fullName>
+                    <default>false</default>
+                    <label>enviaM</label>
+                </value>
+                <value>
+                    <fullName>Suwag</fullName>
+                    <default>false</default>
+                    <label>Suwag</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>ManagerId</fullName>
         <trackFeedHistory>true</trackFeedHistory>
         <type>Hierarchy</type>
