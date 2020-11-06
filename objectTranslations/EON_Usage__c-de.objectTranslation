@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Usage</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Usage</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Usage --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Callout to ERP --></label>
+        <name>Callout_to_ERP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract --></label>
+        <name>Contract__c</name>
+        <relationshipLabel><!-- Usage --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Customer Notification --></label>
+        <name>Customer_Notification__c</name>
+    </fields>
+    <fields>
+        <label><!-- Meter Point --></label>
+        <name>EON_Meter_Point__c</name>
+    </fields>
+    <fields>
+        <label><!-- Meter Read (kWh) --></label>
+        <name>EON_Meter_Read__c</name>
+    </fields>
+    <fields>
+        <label><!-- Meter Reading Date --></label>
+        <name>EON_Meter_Reading_Date__c</name>
+    </fields>
+    <gender>Neuter</gender>
+</CustomObjectTranslation>
