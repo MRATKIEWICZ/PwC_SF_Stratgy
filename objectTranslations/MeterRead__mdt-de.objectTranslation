@@ -11,42 +11,42 @@
         <value>MeterRead</value>
     </caseValues>
     <fields>
-        <label><!-- Customer Notification Needed --></label>
+        <label></label>
         <name>Customer_Notification_Needed__c</name>
     </fields>
     <fields>
-        <label><!-- ERP Callout Needed --></label>
+        <label></label>
         <name>ERP_Callout_Needed__c</name>
     </fields>
     <fields>
-        <label><!-- Organization Name --></label>
+        <label></label>
         <name>Organization_Name__c</name>
         <picklistValues>
             <masterLabel>Hanse Werke</masterLabel>
-            <translation><!-- Hanse Werke --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Headquarter</masterLabel>
-            <translation><!-- Headquarter --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Preussen Elektra</masterLabel>
-            <translation><!-- Preussen Elektra --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Suwag</masterLabel>
-            <translation><!-- Suwag --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>enviaM</masterLabel>
-            <translation><!-- enviaM --></translation>
+            <translation></translation>
         </picklistValues>
     </fields>
     <gender>Neuter</gender>
     <layouts>
         <layout>MeterRead Layout</layout>
         <sections>
-            <label><!-- Custom Links --></label>
+            <label></label>
             <section>Custom Links</section>
         </sections>
     </layouts>
