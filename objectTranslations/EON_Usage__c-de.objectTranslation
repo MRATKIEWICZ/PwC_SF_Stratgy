@@ -11,33 +11,33 @@
         <value>Usage</value>
     </caseValues>
     <fields>
-        <label><!-- Account --></label>
+        <label></label>
         <name>Account__c</name>
-        <relationshipLabel><!-- Usage --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Callout to ERP --></label>
+        <label></label>
         <name>Callout_to_ERP__c</name>
     </fields>
     <fields>
-        <label><!-- Contract --></label>
+        <label></label>
         <name>Contract__c</name>
-        <relationshipLabel><!-- Usage --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Customer Notification --></label>
+        <label></label>
         <name>Customer_Notification__c</name>
     </fields>
     <fields>
-        <label><!-- Meter Point --></label>
+        <label></label>
         <name>EON_Meter_Point__c</name>
     </fields>
     <fields>
-        <label><!-- Meter Read (kWh) --></label>
+        <label></label>
         <name>EON_Meter_Read__c</name>
     </fields>
     <fields>
-        <label><!-- Meter Reading Date --></label>
+        <label></label>
         <name>EON_Meter_Reading_Date__c</name>
     </fields>
     <gender>Neuter</gender>
