@@ -219,8 +219,48 @@
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
+        <fullName>EON_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Electricity</fullName>
+                    <default>false</default>
+                    <label>Electricity</label>
+                </value>
+                <value>
+                    <fullName>Water</fullName>
+                    <default>false</default>
+                    <label>Water</label>
+                </value>
+                <value>
+                    <fullName>Gas</fullName>
+                    <default>false</default>
+                    <label>Gas</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>EndDate</fullName>
         <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>MeterReadChoice__c</fullName>
+        <externalId>false</externalId>
+        <formula>&apos;Contract: &apos;+ ContractNumber+&apos; - &apos;+&apos; &apos;+text(EON_Type__c)+&apos;, Start Date: &apos;+ text(StartDate)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>MeterReadChoice</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Name</fullName>
