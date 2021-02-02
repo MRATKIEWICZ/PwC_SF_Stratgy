@@ -207,6 +207,17 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
+        <fullName>Oppty_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Oppty Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
         <fullName>OwnerId</fullName>
         <trackFeedHistory>true</trackFeedHistory>
         <trackTrending>false</trackTrending>
