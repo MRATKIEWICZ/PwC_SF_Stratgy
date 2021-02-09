@@ -156,6 +156,17 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
+        <fullName>Amt__c</fullName>
+        <externalId>false</externalId>
+        <label>Amt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
         <fullName>CampaignId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
